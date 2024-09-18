@@ -7,6 +7,12 @@ body {
   min-height: 100vh;
 }
 
+/* @tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @tailwind directives */
+
 /* navbar */
 ul {
   list-style-type: none;
