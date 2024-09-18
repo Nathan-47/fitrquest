@@ -4,10 +4,10 @@ import Landing from "./pages/landing";
 function App() {
 
   return (
-    <div className="col">
+    <>
       <Navbar />
       <Landing />
-    </div>
+    </>
   )
 }
 
