@@ -1,15 +1,14 @@
 
-import React from "react";
+
+import React from 'react';
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiGithub, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
+// import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
+// import { SiGithub, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
 
 
-export const RevealBento = () => {
+const RevealBento = () => {
   return (
-    <div className="min-h-screen bg-zinc-900 px-4 py-12 text-zinc-50">
-      <Logo />
       <motion.div
         initial="initial"
         animate="animate"
@@ -24,8 +23,6 @@ export const RevealBento = () => {
         <LocationBlock />
         <EmailListBlock />
       </motion.div>
-      <Footer />
-    </div>
   );
 };
 
@@ -61,11 +58,6 @@ const Block = ({ className, ...rest }) => {
 
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
-    <img
-      src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
-      alt="avatar"
-      className="mb-4 size-14 rounded-full"
-    />
     <h1 className="mb-12 text-4xl font-medium leading-tight">
       Hi, I'm Tom.{" "}
       <span className="text-zinc-400">
@@ -76,7 +68,8 @@ const HeaderBlock = () => (
       href="#"
       className="flex items-center gap-1 text-red-300 hover:underline"
     >
-      Contact me <FiArrowRight />
+      Contact me 
+      {/* <FiArrowRight /> */}
     </a>
   </Block>
 );
@@ -94,7 +87,7 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiYoutube />
+        {/* <SiYoutube /> */}
       </a>
     </Block>
     <Block
@@ -108,7 +101,7 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiGithub />
+        {/* <SiGithub /> */}
       </a>
     </Block>
     <Block
@@ -122,7 +115,7 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-black"
       >
-        <SiTiktok />
+        {/* <SiTiktok /> */}
       </a>
     </Block>
     <Block
@@ -136,7 +129,7 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiTwitter />
+        {/* <SiTwitter /> */}
       </a>
     </Block>
   </>
@@ -157,7 +150,7 @@ const AboutBlock = () => (
 
 const LocationBlock = () => (
   <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
-    <FiMapPin className="text-3xl" />
+    <div className="text-3xl" />
     <p className="text-center text-lg text-zinc-400">Cyberspace</p>
   </Block>
 );
@@ -178,7 +171,8 @@ const EmailListBlock = () => (
         type="submit"
         className="flex items-center gap-2 whitespace-nowrap rounded bg-zinc-50 px-3 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-300"
       >
-        <FiMail /> Join the list
+        {/* <FiMail />  */}
+        Join the list
       </button>
     </form>
   </Block>
@@ -206,15 +200,4 @@ const Logo = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer className="mt-12">
-      <p className="text-center text-zinc-400">
-        Made with ❤️ by{" "}
-        <a href="#" className="text-red-300 hover:underline">
-          @tomisloading
-        </a>
-      </p>
-    </footer>
-  );
-};
+export default RevealBento;
