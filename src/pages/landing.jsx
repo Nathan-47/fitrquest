@@ -1,12 +1,15 @@
 "use strict";
 
+import React from 'react';
+import { RevealBento } from '../components/RevealBento';
+
+
 const Landing = () => {
 
     return (
-        <>
-        <h1>Fitrquest</h1>
-        <p>Hello World</p>
-        </>
+    <div>
+        <RevealBento />
+    </div>    
     );
 };
 
