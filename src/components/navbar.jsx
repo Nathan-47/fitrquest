@@ -1,17 +1,21 @@
 "use strict";
 
+
 const Navbar = () => {
 
 return (
-<header className="header">
+    <header className="header">
     <ul>
-        <a href="#"><li className="nav-sign">Sign Up</li></a>
-        <a href="#"><li className="nav-login">Login</li>
-        </a>
-        <a href="#"><li className="nav-login">About</li>
-        </a>
+        <li className="nav-sign">
+            <a href="#">Sign Up</a></li>
+
+        <li className="nav-login">
+            <a href="#">Login</a></li>
+
+        <li className="nav-login">
+            <a href="about">About</a></li>
     </ul>
-</header>
+    </header>
 )
 };
 
