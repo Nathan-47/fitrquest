@@ -1,5 +1,5 @@
 "use strict";
-
+import { NavLink, Outlet } from "react-router-dom"; 
 
 const Navbar = () => {
 
@@ -7,14 +7,15 @@ return (
     <header className="header">
     <ul>
         <li className="nav-sign">
-            <a href="#">Sign Up</a></li>
+            <NavLink to="#">Login</NavLink>
+            </li>
 
         <li className="nav-login">
-            <a href="#">Login</a></li>
-
-        <li className="nav-login">
-            <a href="about">About</a></li>
-    </ul>
+            <NavLink to="About">About</NavLink>
+            </li>
+    </ul>    
+    
+    <Outlet />
     </header>
 )
 };
