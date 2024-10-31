@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import journey1 from '../images/journey_pic.png';
+import heroLogo from '../images/fitrquest_logo.png';
 
 
 const RevealBento = () => {
@@ -59,11 +60,13 @@ const HeaderBlock = () => (
     scale: 1.03,
   }}
   className="col-span-12 row-span-1 md:col-span-6" id="landing-card">
-    <p className='landing-title'>No Idea, Get Fit Here</p>
-    <a 
-    href="#" 
-    className="flex items-center gap-1">Contact me 
+    <a href="#"><p className='landing-title'>No Idea, Get Fit Here</p></a>
+
+    <div className='grid grid-flow-col auto-cols-max'>
+    <img id="hero-logo" src={heroLogo} />
+    <a href="#" className="hero-slogan">Where's your next quest?
     </a>
+    </div>
   </Block>
 );
 
