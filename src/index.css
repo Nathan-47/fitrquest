@@ -103,4 +103,11 @@ li {
 .comp-text {
   margin-bottom: 10em;
 }
+#hero-logo {
+  width: 120px;
+}
+.hero-slogan {
+  margin: 10px auto;
+  padding-left: 5em;
+}
 /* landing */
