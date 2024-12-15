@@ -111,3 +111,10 @@ li {
   padding-left: 5em;
 }
 /* landing */
+
+
+/* about */
+table {
+  width: 100%;
+  text-align: center;
+}

@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Landing from "./pages/landing";
 import About from "./pages/about";
 
+
 function App() {
 
   const router = createBrowserRouter(
