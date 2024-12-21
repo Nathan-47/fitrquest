@@ -7,6 +7,7 @@ import journey1 from '../images/journey_pic.png';
 import heroLogo from '../images/fitrquest_logo.png';
 
 
+// Create the bento box design for landing 
 const RevealBento = () => {
   return (
       <motion.div
