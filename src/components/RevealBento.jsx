@@ -3,8 +3,8 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import journey1 from '../images/journey_pic.png';
 import heroLogo from '../images/fitrquest_logo.png';
+import journeyhero from '../images/journey_grid_hero.png';
 
 
 // Create the bento box design for landing 
@@ -61,7 +61,7 @@ const HeaderBlock = () => (
     scale: 1.03,
   }}
   className="col-span-12 row-span-1 md:col-span-6" id="landing-card">
-    <a href="#"><p className='landing-title'>No Idea, Get Fit Here</p></a>
+  <h1 className='hero-heading'>No Idea, Get Fit Here</h1>
 
     <div className='grid grid-flow-col auto-cols-max'>
     <img id="hero-logo" src={heroLogo} />
@@ -78,9 +78,10 @@ const QuestBlock = () => (
         scale: 1.03,
       }}
       className="col-span-6 row-span-2 md:col-span-6" id="quest-card"
+      
     >
-      <img className="journey-hero" src={journey1} />
-      <p className='quest-title'>Take on the quest to fitness!</p>
+      {/* <img className="journey-hero" src={journeyhero} /> */}
+      <h1>Take on the quest to fitness!</h1>
       <a 
       href="#" 
       className="flex items-center gap-1 text-black-800 hover:underline"> Find your quest
@@ -95,8 +96,8 @@ const AboutBlock = () => (
     whileHover={{
     scale: 1.03,
     }}
-  className="col-span-6 text-3x1" id="landing-card">
-    <p className='comp-title'>Questcomp</p>
+  className="col-span-6 text-3x1" id="comp-card">
+    <h1>Questcomp</h1>
     <p className='comp-text'>Get involved to win various prizes for your journey</p>
     <a 
       href="#" 
