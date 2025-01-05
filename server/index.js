@@ -3,11 +3,13 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import bookModel from '../server/models/users.js';
 import { ObjectId } from 'mongodb';
+import bodyParser from 'body-parser';
 
 
 const app = express()
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 mongoose.connect('mongodb://localhost:27017/bookstore')
 
@@ -24,7 +26,9 @@ app.get('/books', (req, res) => {
 
 
 
-// FINDING SINGLE DOCUMENTS //
+//////////////////////////
+// FINDING SINGLE DOCUMENTS 
+//////////////////////////
 app.get('/books/:id', (req, res) => {
 
     // If the id string is valid then execute the filtering
@@ -36,11 +40,26 @@ app.get('/books/:id', (req, res) => {
         res.status(200).json(doc)
     })
     .catch(() => {
-        res.status(500).json({error: 'Could not fetch the documents'})
+        res.status(500).json({error: 'Could not fetch the documents1'})
     })
     } else {
         res.status(500).json({error: 'Not valid ID'})
     }
+})
+
+
+app.post('/books', (req, res) => {
+    
+    const book = req.body
+    
+
+    bookModel.create(book)
+    .then(result => {
+        res.status(201).json(result)
+    })
+    .catch(() => {
+        res.status(500).json({err: 'Could not create new document'})
+    })
 })
 
 
