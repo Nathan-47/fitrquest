@@ -16,6 +16,19 @@ body {
 @tailwind utilities;
 /* @tailwind directives */
 
+h1 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 2.5rem;
+}
+.h2 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.75rem;
+}
+.h3 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.5rem;
+}
+
 /* navbar */
 .header {
   position: relative;
@@ -41,7 +54,7 @@ li {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   margin: 15px 20px auto;
 }
 .nav-sign {
@@ -50,7 +63,7 @@ li {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   background: #E6A22B;
   margin: 15px 20px auto;
   margin-right: 3em;
@@ -78,27 +91,26 @@ li {
   background: #D9D9D9;
   border: none;
 }
+#comp-card {
+  background-image: url('./images/comp_grid_hero.png');
+  object-fit: cover;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 #quest-card {
-  background: #E6A22B;
-  border: none;
+  background-image: url('./images/journey_grid_hero.png');
+  object-fit: cover;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
-.landing-title {
-  font-size: 3em;
-  font-family: 'Outfit', sans-serif;
-  font-weight: bolder;
+.hero-heading {
   margin-bottom: 1em;
-}
-.quest-title {
-  font-size: 2.2em;
-  font-family: 'Outfit', sans-serif;
-  font-weight: bolder;
-  margin-top: 1.5em;
-  margin-bottom: 3em;
-}
-.comp-title {
-  font-size: 2em;
-  font-family: 'Outfit', sans-serif;
-  font-weight: bolder;
 }
 .comp-text {
   margin-bottom: 10em;
