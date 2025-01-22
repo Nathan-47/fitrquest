@@ -7,7 +7,8 @@ const bookSchema = new mongoose.Schema({
     rating: Number,
     genres: Array,
     review: Array,
-    name: String
+    name: String,
+    imageFile: Object,
     // email: String,
     // age: Number
 })
