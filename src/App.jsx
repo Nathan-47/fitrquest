@@ -2,6 +2,7 @@ import {createBrowserRouter, Route, createRoutesFromElements, RouterProvider} fr
 import Navbar from "./components/navbar";
 import Landing from "./pages/landing";
 import About from "./pages/about";
+import QuestFinder from './pages/questFinder';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <Route path="/" element={<Navbar />}>  
       <Route index element={<Landing/>} />
 
-      <Route path="about" element={<About/>} />
+      <Route path="about" element={<QuestFinder/>} />
 
       {/* 404 page link */}
       {/* <Route path="*" element={<NotExist />} /> */}
