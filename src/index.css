@@ -130,3 +130,11 @@ table {
   width: 100%;
   text-align: center;
 }
+
+.quest-image, .quest-cal, .quest-info {
+  display: none;
+}
+
+.show {
+  display: block;
+}
