@@ -8,7 +8,7 @@ const About = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/getBook')
+      .get('http://localhost:4000/books')
       .then(books => setBooks(books.data))
       .catch(err => console.log(err));
   }, []);
@@ -31,7 +31,7 @@ const About = () => {
       return (
         <tr>
           <td>{book.title}</td>
-          <td>{book.author}</td>
+          <td>{book.imageFile}</td>
           <td>{book.pages} {book.page}</td>
         </tr>
       );
