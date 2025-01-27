@@ -72,7 +72,6 @@ app.get('/books/:id', (req, res) => {
 app.post('/books', (req, res) => {
     
     const book = req.body
-    
 
     bookModel.create(book)
     .then(result => {
