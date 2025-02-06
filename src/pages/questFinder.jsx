@@ -68,6 +68,12 @@ const showVids = document.querySelector('.video1')
         <button className="quiz-button" onClick={selectClickA}> 
         {currentQ.answerA}
         <br />
+        <div className="quest-cal2">{currentQ.answerA2}</div>
+        <br />
+        <div className="quest-cal3">{currentQ.answerA3}</div>
+        <br />
+        <div className="quest-cal4">{currentQ.answerA4}</div>
+        <br />
         <img className="quest-image" src={currentQ.imgFile} alt="bodybulding" />
         <br />
         <div className="quest-cal">{currentQ.answerCalories}</div>
