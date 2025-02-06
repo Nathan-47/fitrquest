@@ -5,13 +5,20 @@ import bookModel from '../server/models/users.js';
 import { ObjectId } from 'mongodb';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import userRoutes from './routes/user.js';
 
 dotenv.config();  // Configure dotenv to load the .env file
+
+
 
 const app = express()
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+
+// for user login or signup
+app.use('/user', userRoutes);
 
 
 // connect to database
@@ -26,7 +33,9 @@ mongoose.connect(process.env.MONGO_URI)
 })
 
 
-// routes
+
+
+// routes //
 app.get('/books', (req, res) => {
 
     // Helpful API Pagination 
