@@ -63,22 +63,22 @@ const showVids = document.querySelector('.video1')
     return (
         <>
 
-        <div className="textsection">{currentQ.question}</div>
+        <div class="container">
+            <div class="row">
+            <div className="textsection">{currentQ.question}</div>
 
         <button className="quiz-button" onClick={selectClickA}> 
         {currentQ.answerA}
         <br />
-        <div className="quest-cal2">{currentQ.answerA2}</div>
-        <br />
-        <div className="quest-cal3">{currentQ.answerA3}</div>
-        <br />
-        <div className="quest-cal4">{currentQ.answerA4}</div>
-        <br />
+        <div className="quest-cal2">{currentQ.answerIntro}</div>
+        
+        <div className="quest-cal3">{currentQ.answerFood}</div>
+        
+        <div className="quest-cal4">{currentQ.answerRec}</div>
+        
         <img className="quest-image" src={currentQ.imgFile} alt="bodybulding" />
-        <br />
-        <div className="quest-cal">{currentQ.answerCalories}</div>
-        <br />
-        <div className="quest-info">{currentQ.answerInfo}</div>
+        
+        <div className="quest-info">{currentQ.answerLearn}</div>
         <br />
 
         {/* TODO: For vids add the hidden class on divs instead of CSS */}
@@ -96,6 +96,10 @@ const showVids = document.querySelector('.video1')
 
         {/* FIXME: Link back to homepage to test if it works */}
         <Link className="quiz-link" to="/" onClick={() => window.location.reload()}>Restart Quest</Link>
+            </div>
+        </div>
+
+ 
 
         </>
 
