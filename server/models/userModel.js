@@ -6,6 +6,9 @@ import validator from "validator";
 
 const Schema = mongoose.Schema
 
+
+// make this more cleaner 
+
 const userSchema = new Schema({
     name: {
         type: String,
