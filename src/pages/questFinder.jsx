@@ -1,18 +1,70 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
 
 
 // quest component data
-import Quest from "../components/quest";
+import Quest from "../data/quest";
+
 
 
 const QuestFinder = () => {
 
-// Query selectors
-const showImg = document.querySelector('.quest-image');
-const showVids = document.querySelector('.video1')
+//useRef selectors
+const showImgRef = useRef(null);
+const showVidsRef = useRef(null);
+const showLinkRef = useRef(null);
+const showtabRef = useRef(null);
+const showRec = document.querySelector('.quest-rec-heading');
+const showRecContent = document.querySelector('.quest-rec-content');
+const showHelpVid = document.querySelector('.quest-help-heading');
 
 
+// tabs function component
+function CustomTabPanel(props) {
+    const { children, value, index, ...other } = props;
+  
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      </div>
+    );
+  }
+
+  CustomTabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+  };
+  
+  function a11yProps(index) {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,
+    };
+  }
+
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (_event, newValue) => {
+      setValue(newValue);
+    };
+
+// tabs function component
+
+
+
+// navigate via user interactions with the questions
     let navigate = useNavigate();
     const [currentQ, setCurrentQ] = useState('')
 
@@ -24,14 +76,13 @@ const showVids = document.querySelector('.video1')
     // Question handlers
     const selectClickA = () => {
         console.log('a clicked')
-            const nextQ = Quest.find(question => question.id === currentQ.idNextQuestionA)
-            if (nextQ) {
+        const nextQ = Quest.find(question => question.id === currentQ.idNextQuestionA)
+        if (nextQ) {
                 setCurrentQ(nextQ)
-            } else {
-
-                // FIXME: I dont know if this is needed?
-                navigate(`/result/${currentQ.questResultA}`)
-            }
+        } else {
+            // FIXME: I dont know if this is needed?
+            navigate(`/result/${currentQ.questResultA}`)
+        }
     }
 
     const selectClickB = () => {
@@ -40,58 +91,134 @@ const showVids = document.querySelector('.video1')
         if (nextQ) {
             setCurrentQ(nextQ)
         } else {
-
             // FIXME: I dont know if this is needed?
             navigate(`/result/${currentQ.questResultB}`)
         }
     }
 
 
-    // show the hidden image when answers are shown
+    // show the hidden elents when user given results
     console.log(currentQ.question)
-    if (currentQ.question === 'Bodybuilding') {
+    if (['Bodybuilding', 'Powerlifting'].includes(currentQ.question)) {
         console.log('update me!')
-        showImg.classList.add('show');
-        showVids.classList.add('show');
+        showImgRef.current?.classList.add('show');
+        showVidsRef.current?.classList.add('show');
+        showLinkRef.current?.classList.add('show');
+        showtabRef.current?.classList.add('show');
+        showRec.classList.add('show');
+        showRecContent.classList.add('show');
+        showHelpVid.classList.add('show');
     }
 
-    // Display youtube vid per answer 
-    const ytvid = `https://www.youtube.com/embed/${currentQ.answerVideo}`
-    console.log(currentQ.answerVideo);
+    // Display youtube videos 
+    const ytvid = `https://www.youtube.com/embed/${currentQ.answerVideo}`;
+    const eatvid = `https://www.youtube.com/embed/${currentQ.answerLink3}`;
+    const recvid = `https://www.youtube.com/embed/${currentQ.recoveryvid}`;
+    console.log(currentQ.answerLink3);
+
+    // Display macro calculator link
+    const macLink = `${currentQ.answerlink1}`;
+    const macLink2 = `${currentQ.answerLink2}`;
+    const recLink = `${currentQ.recoveryLink}`;
+    console.log(currentQ.answerlink1)
 
 
     return (
         <>
 
-        <div class="container">
-            <div class="row">
-            <div className="textsection">{currentQ.question}</div>
+        <div className="container">
+            <div className="row">
+                <div className="textsection">{currentQ.question}</div>
+                <button className="quiz-button" onClick={selectClickA}> 
+                    {currentQ.answerA}
+                </button>
+                <br />
+                <div className="quest-cal2">{currentQ.intro}</div>
+                <div className="quest-cal5">{currentQ.content}</div>
+                
+          {/* Tabs */}
+                <div className="tab-wrapper" ref={showtabRef}>
+                    <Box sx={{ width: '100%' }}>
+                        <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
+                            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                                <Tab label="Training" {...a11yProps(0)} />
+                                <Tab label="Nutrition" {...a11yProps(1)} />
+                                <Tab label="Recovery" {...a11yProps(2)} />
+                                <Tab label="Learn" {...a11yProps(3)} />
+                            </Tabs>
+                        </Box>
 
-        <button className="quiz-button" onClick={selectClickA}> 
-        {currentQ.answerA}
-        <br />
-        <div className="quest-cal2">{currentQ.answerIntro}</div>
-        
-        <div className="quest-cal3">{currentQ.answerFood}</div>
-        
-        <div className="quest-cal4">{currentQ.answerRec}</div>
-        
-        <img className="quest-image" src={currentQ.imgFile} alt="bodybulding" />
-        
-        <div className="quest-info">{currentQ.answerLearn}</div>
-        <br />
+        <CustomTabPanel value={value} index={0}>
+        <div className="quest-cal1">{currentQ.training}</div>
+        </CustomTabPanel>
 
+        <CustomTabPanel value={value} index={1}>
+        <div className="quest-cal3">{currentQ.nutrition}</div>     
+        <br />      
+        <a className="quest-link" href={macLink} ref={showLinkRef}>[1] Macro Finder - Calculate what your macros should be determined by your given calories.</a>
+        <br />
+        <a className="quest-link" href={macLink2} ref={showLinkRef}>[2] Meal Planner - Struggling to plan meals? Have no fear, plan all your meals here. All meals macro nutrient friendly and easy to make.</a>
+        <br />
+        <a className="quest-link" href={eatvid} ref={showLinkRef}>[3] Beginners guide to using MyFitnessPal to help track calories</a>
+        </CustomTabPanel>
+
+        <CustomTabPanel value={value} index={2}>
+        <div className="quest-cal4">{currentQ.recovery}</div>
+        <br />
+        <a className="ques-cal4" href={recLink}>Top 14 Tips for muscle recovery</a>
+        <br />
+        <div className="video" ref={showVidsRef}>
+            `<iframe id="video-frame" src={recvid}></iframe>`
+        </div>
+        </CustomTabPanel>
+
+        <CustomTabPanel value={value} index={3}>
+          <div className="quest-cal1">
+            {/* Allows for a line break from the received JSON data*/}
+            {currentQ.learn?.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+                {line}
+                <br />
+            </React.Fragment>
+              ))}
+        </div>
+        </CustomTabPanel>
+      </Box>
+      </div>
+        {/* Tabs */}
+
+      
+      <p className="quest-cheer">{currentQ.cheer}</p>
+
+      <p className="quest-rec-heading">Influencer Reccomendation</p>
+      
+      <p className="quest-rec-content">Here are amazing influencers that will assist you on your quest. Click on all below or type their name into various social media apps to engage and watch all their content.</p>
+
+      <div class="columns-3">
+        {/* TODO:Add template literal for image alt tag */}
+        <p ref={showImgRef}>Sam Sulek</p>
+      <img id="quest-image" class="col-4" ref={showImgRef} src={currentQ.imgFile} />
+
+      <p ref={showImgRef}>Sam Sulek</p>
+      <img class="col-4" ref={showImgRef} src={currentQ.imgFile2}  />
+
+      <p ref={showImgRef}>Sam Sulek</p>
+      <img class="col-4" ref={showImgRef} src={currentQ.imgFile3}  />
+      </div>
+
+        {/* <img className="quest-image" ref={showImgRef} src={currentQ.imgFile} alt="bodybulding" /> */}
+
+        <p className="quest-help-heading">Helpful Videos</p>
         {/* TODO: For vids add the hidden class on divs instead of CSS */}
-        <div className="video1">
+        <div className="video1" ref={showVidsRef}>
             `<iframe id="video-frame" src={ytvid}></iframe>`
-            </div>
-        </button>
+        </div>
 
 
-        <button className="quiz-button" onClick={selectClickB}> {currentQ.answerB}
+
+        <button className="quiz-button" onClick={selectClickB}> 
+            {currentQ.answerB}
         </button>
-        
-        <br /><br />
 
 
         {/* FIXME: Link back to homepage to test if it works */}
@@ -99,10 +226,7 @@ const showVids = document.querySelector('.video1')
             </div>
         </div>
 
- 
-
         </>
-
     )
 }
 
