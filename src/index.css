@@ -29,6 +29,20 @@ h1 {
   font-size: 1.5rem;
 }
 
+.container {
+  max-width: 1280px;
+  margin: auto;
+  width: 70%;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    width: 90%;
+    margin: auto !important;
+}
+}
+
+
 /* navbar */
 .header {
   position: relative;
@@ -74,7 +88,6 @@ li {
   color: #E6A22B;
   transition: 0.2s;
 }
-
 /* navbar */
 
 /* landing */
@@ -130,11 +143,153 @@ table {
   width: 100%;
   text-align: center;
 }
-
-.quest-image, .quest-cal, .quest-info, .video1 {
+.quest-image, .quest-cal, .quest-info, .video1, .tab-wrapper, .quest-rec-heading, .quest-rec-content, .quest-help-heading {
   display: none;
 }
-
 .show {
   display: block;
+}
+
+
+/* Quest styles */
+/* FIXME: amend the .quiz-button so that they dont interupt UI */
+.quest-intro-snippet {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+.quest-intro {
+  margin-bottom: 2em;
+}
+.quiz-button {
+  z-index: 1;
+  position: relative;
+  text-align: left;
+  font-family: 'Outfit', sans-serif;
+}
+.textsection {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5em;
+}
+.quest-cal2, .quest-cal3, .quest-cal4, .quest-cal, .quest-info{
+  margin-top: 0em;
+  /* font-family: 'Outfit', sans-serif; */
+  font-size: 1rem;
+}
+a {
+  z-index: 10;
+  position: relative; 
+}
+.quest-cheer {
+  margin-top: 3em;
+  margin-bottom: 4em;
+  font-family: "Outfit";
+  text-align: center;
+}
+.quest-rec-heading {
+  font-size: 1.4rem;
+  font-family: 'Outfit';
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-weight: 800;
+}
+.quest-help-heading {
+    font-size: 1.4rem;
+    font-family: 'Outfit';
+    margin-top: 4em;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: 800;
+}
+.quest-rec-content {
+  margin-bottom: 4em;
+}
+.columns-3 img {
+  margin: 10px auto;
+  text-align: center;
+}
+.influencer-names {
+  text-align: center;
+}
+#video-frame {
+  width: 100%;
+  height: 600px;
+  padding-top: -2em;
+  padding: 2em 12em 6em 12em;
+}
+
+@media screen and (max-width: 1700px) {
+  #video-frame {height: 500px;}
+}
+
+@media screen and (max-width: 1400px) {
+  #video-frame {
+    height: 400px;
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .columns-3 {
+    columns: 1;
+  }
+  .col-4 {
+    width: 100%;
+  }
+  .influencer-names {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 3em;
+    font-weight: 800;
+}
+  #video-frame {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #video-frame {
+    height: 250px;
+    padding: 0em;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #video-frame {height: auto;}
+}
+
+
+/* tabs */
+.css-1qltlow-MuiTabs-indicator {
+  font-weight: 800;
+  border: 3px solid #E6A22B !important;;
+}
+.css-hzcega-MuiTabs-list {
+    justify-content: center;
+}
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+    font-family: 'Outfit';
+    font-weight: 800 !important;
+    font-size: 1.1rem;
+    color: #292929 !important;
+}
+
+@media screen and (max-width: 460px) {
+  .css-hzcega-MuiTabs-list {
+    display: flex;
+    flex-direction: column;
+}
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+    max-width: 100% !important;
+    width: 100%;
+}
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root:focus {
+    color: white !important;
+    background: #292929 !important;
+}
+.css-1qltlow-MuiTabs-indicator {
+  display: none !important;
+}
 }
