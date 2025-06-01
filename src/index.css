@@ -181,12 +181,6 @@ a {
   z-index: 10;
   position: relative; 
 }
-.quest-cheer {
-  margin-top: 3em;
-  margin-bottom: 4em;
-  font-family: "Outfit";
-  text-align: center;
-}
 .quest-rec-heading {
   font-size: 1.4rem;
   font-family: 'Outfit';
@@ -243,10 +237,13 @@ a {
     font-size: 1.3rem;
     margin-top: 3em;
     font-weight: 800;
-}
+  }
   #video-frame {
     height: 300px;
   }
+  .quest-rec-content {
+  margin-bottom: 0em;
+}
 }
 
 @media screen and (max-width: 500px) {
