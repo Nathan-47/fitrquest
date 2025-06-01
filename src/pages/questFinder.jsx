@@ -54,6 +54,7 @@ function CustomTabPanel(props) {
     };
   }
 
+
     const [value, setValue] = React.useState(0);
 
     const handleChange = (_event, newValue) => {
@@ -133,14 +134,15 @@ function CustomTabPanel(props) {
                     {currentQ.answerA}
                 </button>
                 <br />
-                <div className="quest-cal2">{currentQ.intro}</div>
-                <div className="quest-cal5">{currentQ.content}</div>
+                <div className="quest-intro-snippet">{currentQ.intro}</div>
+                <div className="quest-intro">{currentQ.content}</div>
                 
           {/* Tabs */}
                 <div className="tab-wrapper" ref={showtabRef}>
                     <Box sx={{ width: '100%' }}>
-                        <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
-                            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                        <Box sx={{ borderBottom: 0}}>
+                            <Tabs value={value} onChange={handleChange}
+                             aria-label="Quest paths">
                                 <Tab label="Training" {...a11yProps(0)} />
                                 <Tab label="Nutrition" {...a11yProps(1)} />
                                 <Tab label="Recovery" {...a11yProps(2)} />
@@ -187,23 +189,21 @@ function CustomTabPanel(props) {
       </div>
         {/* Tabs */}
 
-      
-      <p className="quest-cheer">{currentQ.cheer}</p>
 
-      <p className="quest-rec-heading">Influencer Reccomendation</p>
+      <p className="quest-rec-heading">Influencer Recommendation</p>
       
       <p className="quest-rec-content">Here are amazing influencers that will assist you on your quest. Click on all below or type their name into various social media apps to engage and watch all their content.</p>
 
       <div class="columns-3">
         {/* TODO:Add template literal for image alt tag */}
-        <p ref={showImgRef}>Sam Sulek</p>
+        <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName}</p>
       <img id="quest-image" class="col-4" ref={showImgRef} src={currentQ.imgFile} />
 
-      <p ref={showImgRef}>Sam Sulek</p>
+      <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName2}</p>
       <img class="col-4" ref={showImgRef} src={currentQ.imgFile2}  />
 
-      <p ref={showImgRef}>Sam Sulek</p>
-      <img class="col-4" ref={showImgRef} src={currentQ.imgFile3}  />
+      <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName3}</p>
+      <img className="col-4" ref={showImgRef} src={currentQ.imgFile3}  />
       </div>
 
         {/* <img className="quest-image" ref={showImgRef} src={currentQ.imgFile} alt="bodybulding" /> */}
@@ -231,3 +231,8 @@ function CustomTabPanel(props) {
 }
 
 export default QuestFinder;
+
+
+
+
+
