@@ -153,6 +153,19 @@ table {
 
 /* Quest styles */
 /* FIXME: amend the .quiz-button so that they dont interupt UI */
+.question-logo {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 150px;
+}
+.question-logo img {
+  margin-left: 35px;
+}
+.question-wrapper {
+  justify-content: center;
+  display: grid;
+  padding: 10em;
+}
 .quest-intro-snippet {
   font-size: 1.5rem;
   font-weight: 800;
@@ -166,10 +179,12 @@ table {
   position: relative;
   text-align: left;
   font-family: 'Outfit', sans-serif;
+  text-align: center;
+  font-size: 1.6rem;
 }
 .textsection {
   font-family: 'Public Sans', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5em;
 }
 .quest-cal2, .quest-cal3, .quest-cal4, .quest-cal, .quest-info{
@@ -225,25 +240,25 @@ a {
   }
 }
 
+@media screen and (max-width: 620px) {
+.question-wrapper {
+    padding: 4em;
+    /* margin-left: -2em; */
+    margin-top: 2em;
+}
+}
+
 @media screen and (max-width: 600px) {
-  .columns-3 {
-    columns: 1;
-  }
-  .col-4 {
-    width: 100%;
-  }
+  .columns-3 {columns: 1;}
+  .col-4 {width: 100%;}
   .influencer-names {
     text-align: center;
     font-size: 1.3rem;
     margin-top: 3em;
     font-weight: 800;
   }
-  #video-frame {
-    height: 300px;
-  }
-  .quest-rec-content {
-  margin-bottom: 0em;
-}
+  #video-frame {height: 300px;}
+  .quest-rec-content {margin-bottom: 0em;}
 }
 
 @media screen and (max-width: 500px) {
@@ -251,6 +266,10 @@ a {
     height: 250px;
     padding: 0em;
   }
+}
+
+@media screen and (max-width: 370px) {
+  .question-wrapper {padding: 2em;}
 }
 
 @media screen and (max-width: 350px) {

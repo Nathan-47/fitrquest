@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import questionLogo from '../images/fitrquest_logo.svg';
 
 
 // quest component data
@@ -129,11 +130,20 @@ function CustomTabPanel(props) {
 
         <div className="container">
             <div className="row">
-                <div className="textsection">{currentQ.question}</div>
+              <div className="question-wrapper">
+              <div className="question-logo"><img src={questionLogo} alt="fitrquest logo"/></div>
+              <div className="textsection">{currentQ.question}</div>
+
+              <div className="grid grid-cols-2 grid-rows-1 gap-2">
                 <button className="quiz-button" onClick={selectClickA}> 
                     {currentQ.answerA}
                 </button>
-                <br />
+                <button className="quiz-button" onClick={selectClickB}> 
+                  {currentQ.answerB}
+                </button>
+              </div>
+              </div>
+
                 <div className="quest-intro-snippet">{currentQ.intro}</div>
                 <div className="quest-intro">{currentQ.content}</div>
                 
@@ -214,11 +224,6 @@ function CustomTabPanel(props) {
             `<iframe id="video-frame" src={ytvid}></iframe>`
         </div>
 
-
-
-        <button className="quiz-button" onClick={selectClickB}> 
-            {currentQ.answerB}
-        </button>
 
 
         {/* FIXME: Link back to homepage to test if it works */}
