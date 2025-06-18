@@ -101,7 +101,7 @@ function CustomTabPanel(props) {
 
     // show the hidden elents when user given results
     console.log(currentQ.question)
-    if (['Bodybuilding', 'Powerlifting'].includes(currentQ.question)) {
+    if (['Bodybuilding', 'Powerlifting', 'Crossfit/Hyrox'].includes(currentQ.question)) {
         console.log('update me!')
         showImgRef.current?.classList.add('show');
         showVidsRef.current?.classList.add('show');
@@ -122,7 +122,8 @@ function CustomTabPanel(props) {
     const macLink = `${currentQ.answerlink1}`;
     const macLink2 = `${currentQ.answerLink2}`;
     const recLink = `${currentQ.recoveryLink}`;
-    console.log(currentQ.answerlink1)
+    const trainLink = `${currentQ.trainingLink}`;
+    console.log(currentQ.trainLink)
 
 
     return (
@@ -162,6 +163,8 @@ function CustomTabPanel(props) {
 
         <CustomTabPanel value={value} index={0}>
         <div className="quest-cal1">{currentQ.training}</div>
+        <br />
+            <a className="quest-link" href={trainLink} ref={showLinkRef}>[1] WOD Workouts - Find various beginner friendly workouts to modify at your pace</a>
         </CustomTabPanel>
 
         <CustomTabPanel value={value} index={1}>
