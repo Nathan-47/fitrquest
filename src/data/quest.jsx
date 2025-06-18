@@ -1,11 +1,11 @@
 const Quest = [
     {
-        question: "I am",
+        question: "How old are you?",
         id: 0,
-        answerA: "20-30",
+        answerA: "15-44",
         idNextQuestionA: 20,
-        answerB: "50+",
-        idNextQuestionB: 21
+        answerB: "45+",
+        idNextQuestionB: 22
     },
     {
         question: "Bodybuilding",
@@ -65,19 +65,55 @@ const Quest = [
         recoveryLink: 'https://www.healthline.com/health/muscle-recovery#injury-prevention',
         recoveryvid: 'PUJpU6Ti5jU',
 
-        learn: 'Here are steps on how to program your Powerlifting future \n\n 1. Understand Powerlifting Basics\n TPowerlifting focuses on three lifts: squat, bench press, and deadlift. Key principles include progressive overload, proper form, and consistency. \n\n  2. Set Your Goals \n Define short-term and long-term goals (e.g., increasing your 1RM). Use/research the SMART goal system to stay focused and motivated. \n\n 3. Choose a Program \n Start with beginner programs like Starting Strength for fundamental strength, or try 5/3/1 for flexibility as you progress. Advanced lifters can explore Westside Barbell for specialized methods. \n\n  4. Track Your Progress \n Track your lifts, volume, and intensity weekly. Adjust your training to ensure gradual improvement without overtraining. \n\n  5. Nutrition \n Fuel your body with a balanced diet rich in lean proteins (chicken, fish, tofu), complex carbohydrates (sweet potatoes, rice), and healthy fats (avocados, nuts). Ensure you"re eating enough to support muscle growth, aiming for a calorie surplus. \n\n 6. Sample Weekly Plan \n Beginners: Squat, bench, and deadlift (3x a week). \n Advanced: Max effort days for each lift, plus accessory work.',
+        learn: 'Here are steps on how to program your Powerlifting future \n\n 1. Understand Powerlifting Basics\n Powerlifting focuses on three lifts: squat, bench press, and deadlift. Key principles include progressive overload, proper form, and consistency. \n\n  2. Set Your Goals \n Define short-term and long-term goals (e.g., increasing your 1RM). Use/research the SMART goal system to stay focused and motivated. \n\n 3. Choose a Program \n Start with beginner programs like Starting Strength for fundamental strength, or try 5/3/1 for flexibility as you progress. Advanced lifters can explore Westside Barbell for specialized methods. \n\n  4. Track Your Progress \n Track your lifts, volume, and intensity weekly. Adjust your training to ensure gradual improvement without overtraining. \n\n  5. Nutrition \n Fuel your body with a balanced diet rich in lean proteins (chicken, fish, tofu), complex carbohydrates (sweet potatoes, rice), and healthy fats (avocados, nuts). Ensure you"re eating enough to support muscle growth, aiming for a calorie surplus. \n\n 6. Sample Weekly Plan \n Beginners: Squat, bench, and deadlift (3x a week). \n Advanced: Max effort days for each lift, plus accessory work.',
         
-        imgFile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfkwsry9xQQcpBp1Dlt6iYpp8H4UCVzKbPA&s',
-        imgFile2: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfkwsry9xQQcpBp1Dlt6iYpp8H4UCVzKbPA&s',
-        imgFile3: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfkwsry9xQQcpBp1Dlt6iYpp8H4UCVzKbPA&s',
+        imgFile: 'src/images/influencers/brian_alshrue.jpg',
+        imgFile2: 'src/images/influencers/gym_reaper.jpg',
+        imgFile3: 'src/images/influencers/russel_orhii.jpg',
 
-        imgFileName:'Sam Sulek',
-        imgFileName2:'',
-        imgFileName3:'',
+        imgFileName:'Brian Alshrue',
+        imgFileName2:'Gym Reaper',
+        imgFileName3:'Russel Orhii',
 
         answerInfo: '',
 
-        answerVideo: 'HuXijX93w0o?si=pZx4gGJnCAL7FiO5',
+        answerVideo: 'YfOI8BdrntQ',
+    },
+    {
+        id: 22,
+        question: "Crossfit/Hyrox",
+        intro: "Your journey has led you to CrossFit/Hyrox! 🏃‍♀️🏃‍♂️",
+        content: "From your input, you have been fit to begin your CrossFit/Hyrox journey. Whether you're aiming to improve your overall fitness or compete, we’ll provide a beginner’s guide to help you learn functional movements, gain endurance, and get strong whilst having fun.",
+
+        training: 'A great recommendation would be to use the [1] WOD website that allows users to adjust equipment usage, follow along with videos and sort by newest or popular workouts. A popular method for beginners is to half any WOD you come across to make workout easier.',
+
+        trainingLink: 'https://wodwell.com/wods/?sort=newest',
+
+        nutrition: 'We recommend to eat 2,200 - 2,800Kcal if you are a beginner/intermediate and 2,800 - 3,500Kcal if you are a more advanced. You can adjust using the Marco Finder [1] to suit your daily routine. \n For an automated meal plan to fit your calorie intake use the Meal Plan link [2] to make meal planning healthier and easier. \n To track your calories and weight use our recommended app MyFitnessPal as it easy to use and navigate through for all levels [3]. \n\n The calorie range for a Hyrox/CrossFit participant can vary on many factors, including workout intensity, body composition, age and gender.',
+
+        answerlink1: 'https://www.calculator.net/macro-calculator.html',
+        answerLink2: 'https://www.eatthismuch.com/',
+        answerLink3: 'tkt_ju3NoUw',
+
+
+        recovery: 'Regarding both sports recovery is imperative as you are working your full body at an intense level.',
+        recoveryLink: 'https://www.healthline.com/health/muscle-recovery#injury-prevention',
+        recoveryvid: 'PUJpU6Ti5jU',
+
+        learn: 'Here are steps on how to program your Crosfit/hyrox future \n\n 1. Set Your Goals\n Powerlifting focuses on three lifts: squat, bench press, and deadlift. Key principles include progressive overload, proper form, and consistency. \n\n 2. Choose a Program \n Focus on workouts that combine weightlifting, gymnastics, and metabolic conditioning (WODs). \n\n 3. Track Your Progress \n Record your times, reps, and weights during each workout. Regularly test yourself with benchmark WODs or Hyrox simulations to gauge improvement. \n\n  4. Nutrition & Recovery \n Fuel your body with balanced macros, especially carbs for energy and protein for recovery. Make recovery a priority with proper sleep, stretching, and active rest days. \n\n  5. Sample Weekly Plan \n 3-5 WODs per week, mixing strength, cardio, and gymnastics.',
+        
+        
+        imgFile: 'src/images/influencers/lucy_davis.jfif',
+        imgFile2: 'src/images/influencers/obi_vincent.jfif',
+        imgFile3: 'src/images/influencers/team_richey.jpg',
+
+        imgFileName:'Lucy Davis Fit',
+        imgFileName2:'Obi Vincent',
+        imgFileName3:'TeamRichey',
+
+        answerInfo: '',
+
+        answerVideo: '-9SNmXUAVwQ',
     },
 ];
 
