@@ -1,18 +1,62 @@
 const Quest = [
     {
-        question: "How old are you?",
+        question: "I am...",
         id: 0,
         answerA: "15-44",
-        idNextQuestionA: 20,
+        idNextQuestionA: 1,
         answerB: "45+",
-        idNextQuestionB: 22
+        idNextQuestionB: 2
     },
     {
-        question: "Bodybuilding",
-        id: 10,
+        question: "How active are you everyday (office, construction etc)?",
+        id: 1,
+        answerA: "Very",
+        idNextQuestionA: 2,
+        answerB: "Semi/Not really",
+        idNextQuestionB: 2
     },
     {
-        id: 20,
+        question: "How intense would you like to train?",
+        id: 2,
+        answerA: "Medium-High",
+        idNextQuestionA: 4,
+        answerB: "Low-Medium",
+        idNextQuestionB: 3 
+    },
+    {
+        question: "Which of the following do you want?",
+        id: 3,
+        answerA: "Lose weight/Maintain",
+        idNextQuestionA: 6,
+        answerB: "Gain weight",
+        idNextQuestionB: 5
+    },
+    {
+        question: "What interests you more?",
+        id: 4,
+        answerA: "Weightlifting",
+        idNextQuestionA: 5,
+        answerB: "Cardio",
+        idNextQuestionB: 6
+    },
+    {
+        question: "How much food would you say you eat?",
+        id: 5,
+        answerA: "Normal or low amount",
+        idNextQuestionA: 6,
+        answerB: "Big amount",
+        idNextQuestionB: 7
+    },
+    {
+        question: "Do you want to be?",
+        id: 6,
+        answerA: "Stronger",
+        idNextQuestionA: 8,
+        answerB: "Athletic",
+        idNextQuestionB: 9 
+    },
+    {
+        id: 7,
         question: "Bodybuilding",
         intro: "Your journey has led you to Bodybuilding! 💪",
         content: "From your input, you have been seen fit to begin your bodybuilding journey. We’ll provide a beginner orientated roadmap to help you get stronger plus gain size and strength whilst looking good.",
@@ -45,7 +89,7 @@ const Quest = [
         answerVideo: 'HuXijX93w0o?si=pZx4gGJnCAL7FiO5',
     },
     {
-        id: 21,
+        id: 8,
         question: "Powerlifting",
         intro: "Your journey has led you to Powerlifting! 💪",
         content: "From your input, you have been seen fit to begin your powerlifting journey. We’ll provide a beginner orientated roadmap to help you get stronger, master the three main lifts, and optimise your training for strength gains.",
@@ -80,7 +124,7 @@ const Quest = [
         answerVideo: 'YfOI8BdrntQ',
     },
     {
-        id: 22,
+        id: 9,
         question: "Crossfit/Hyrox",
         intro: "Your journey has led you to CrossFit/Hyrox! 🏃‍♀️🏃‍♂️",
         content: "From your input, you have been fit to begin your CrossFit/Hyrox journey. Whether you're aiming to improve your overall fitness or compete, we’ll provide a beginner’s guide to help you learn functional movements, gain endurance, and get strong whilst having fun.",
@@ -103,8 +147,8 @@ const Quest = [
         learn: 'Here are steps on how to program your Crosfit/hyrox future \n\n 1. Set Your Goals\n Powerlifting focuses on three lifts: squat, bench press, and deadlift. Key principles include progressive overload, proper form, and consistency. \n\n 2. Choose a Program \n Focus on workouts that combine weightlifting, gymnastics, and metabolic conditioning (WODs). \n\n 3. Track Your Progress \n Record your times, reps, and weights during each workout. Regularly test yourself with benchmark WODs or Hyrox simulations to gauge improvement. \n\n  4. Nutrition & Recovery \n Fuel your body with balanced macros, especially carbs for energy and protein for recovery. Make recovery a priority with proper sleep, stretching, and active rest days. \n\n  5. Sample Weekly Plan \n 3-5 WODs per week, mixing strength, cardio, and gymnastics.',
         
         
-        imgFile: 'src/images/influencers/lucy_davis.jfif',
-        imgFile2: 'src/images/influencers/obi_vincent.jfif',
+        imgFile: 'src/images/influencers/lucy_davis.jpg',
+        imgFile2: 'src/images/influencers/obi_vincent.jpg',
         imgFile3: 'src/images/influencers/team_richey.jpg',
 
         imgFileName:'Lucy Davis Fit',
