@@ -23,6 +23,7 @@ const showtabRef = useRef(null);
 const showRec = document.querySelector('.quest-rec-heading');
 const showRecContent = document.querySelector('.quest-rec-content');
 const showHelpVid = document.querySelector('.quest-help-heading');
+const showRestartBtn = document.querySelector('.restartBtn');
 
 
 // tabs function component
@@ -110,6 +111,7 @@ function CustomTabPanel(props) {
         showRec.classList.add('show');
         showRecContent.classList.add('show');
         showHelpVid.classList.add('show');
+        showRestartBtn.classList.add('show');
     }
 
     // Display youtube videos 
@@ -210,7 +212,7 @@ function CustomTabPanel(props) {
       <div class="columns-3">
         {/* TODO:Add template literal for image alt tag */}
         <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName}</p>
-      <img id="quest-image" class="col-4" ref={showImgRef} src={currentQ.imgFile} />
+      <img id="quest-image" className="col-4" ref={showImgRef} src={currentQ.imgFile} />
 
       <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName2}</p>
       <img class="col-4" ref={showImgRef} src={currentQ.imgFile2}  />
@@ -229,8 +231,8 @@ function CustomTabPanel(props) {
 
 
 
-        {/* FIXME: Link back to homepage to test if it works */}
-        <Link className="quiz-link" to="/" onClick={() => window.location.reload()}>Restart Quest</Link>
+        {/* FIXME: Link back to quest page once created */}
+      <Link to="/" onClick={() => window.location.reload()} className="restartBtn"aria-label="Restart Quest"> Restart Quest</Link>
             </div>
         </div>
 
