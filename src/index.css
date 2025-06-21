@@ -35,6 +35,19 @@ h1 {
   width: 70%;
 }
 
+/* accessibility focus on elements of pages */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #292929;  
+    outline-offset: 3px;      
+    background-color: #e6f0ff;
+    transition: outline-color 0.2s ease, background-color 0.2s ease;
+}
+
+
 @media screen and (max-width: 850px) {
   .container {
     width: 90%;
@@ -143,7 +156,7 @@ table {
   width: 100%;
   text-align: center;
 }
-.quest-image, .quest-cal, .quest-info, .video1, .tab-wrapper, .quest-rec-heading, .quest-rec-content, .quest-help-heading {
+.quest-image, .quest-cal, .quest-info, .video1, .tab-wrapper, .quest-rec-heading, .quest-rec-content, .quest-help-heading, .restartBtn {
   display: none;
 }
 .show {
@@ -152,24 +165,23 @@ table {
 
 
 /* Quest styles */
-/* FIXME: amend the .quiz-button so that they dont interupt UI */
 .question-logo {
   margin-top: 2em;
   margin-bottom: 2em;
   width: 150px;
-}
-.question-logo img {
-  margin-left: 35px;
+  justify-self: center;
 }
 .question-wrapper {
   justify-content: center;
   display: grid;
-  padding: 10em;
+  padding: 5em;
+  padding-top: 5em;
 }
 .quest-intro-snippet {
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 1em;
+  margin-top: -4em;
 }
 .quest-intro {
   margin-bottom: 2em;
@@ -186,6 +198,7 @@ table {
   font-family: 'Public Sans', sans-serif;
   font-size: 1.8rem;
   margin-bottom: 1.5em;
+  text-align: center;
 }
 .quest-cal2, .quest-cal3, .quest-cal4, .quest-cal, .quest-info{
   margin-top: 0em;
@@ -228,6 +241,21 @@ a {
   padding-top: -2em;
   padding: 2em 12em 6em 12em;
 }
+.restartBtn {
+    padding: 15px;
+    background-color: #E6A22B;
+    color: #292929;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    position: fixed;
+    right: 5vw;
+    bottom: 10vw;
+    width: auto;
+    text-align: center;
+    z-index: 100 !important;
+    border: 4px solid #292929;
+}
 
 @media screen and (max-width: 1700px) {
   #video-frame {height: 500px;}
@@ -246,6 +274,7 @@ a {
     /* margin-left: -2em; */
     margin-top: 2em;
 }
+.quest-intro-snippet {margin-top: -1em;}
 }
 
 @media screen and (max-width: 600px) {
