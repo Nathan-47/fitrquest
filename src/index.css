@@ -350,11 +350,20 @@ a {
   flex-direction: column;
   align-items: center; 
 }
+#signup-wrapper {
+  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+  width: 45%;
+  margin-top: 4em;
+  flex-direction: column;
+  align-items: center; 
+}
 .login-logo {
   width: 100px;
   margin: auto;
 }
-.login-title {
+.auth-title {
   font-size: 2rem;
   font-weight: 700;
   font-family: 'Outfit', sans-serif;
@@ -362,7 +371,7 @@ a {
   margin-bottom: 1.5em;
   text-align: center;
 }
-.email-input, .password-input {
+.input-box, .password-input {
   margin: 5px auto;
   width: 100%;
   border: 2px solid #000;
@@ -370,7 +379,7 @@ a {
   padding: 10px;
   margin-bottom: 2em;
 }
-.login-btn {
+.auth-btn {
   background-color: #292929;
   color: #fafafa;
   border-radius: 7px;
@@ -378,7 +387,7 @@ a {
   padding: 10px;
   font-family: 'Outfit', sans-serif;
 }
-.login-btn:hover {
+.auth-btn:hover {
   background-color: #fafafa;
   color: #000;
   border: 2px solid #000;
@@ -389,3 +398,7 @@ a {
   color: #0097f1;
   font-weight: 800;
 }
+.error {
+  color: red;
+}
+
