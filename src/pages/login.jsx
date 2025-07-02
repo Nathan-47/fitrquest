@@ -21,10 +21,10 @@ const Login = () => {
 
             <img className="login-logo" src={logo} alt="fitrquest logo" />
 
-            <h3 className="login-title">Login</h3>
+            <h3 className="auth-title">Login</h3>
             <label>Email</label>
             <input
-            className="email-input"
+            className="input-box"
             type="email"
             placeholder="Email"
             // onchange handler so that when change happens we want to update the email state
@@ -42,7 +42,7 @@ const Login = () => {
             />
 
             {/* // while button is loading button cannot be pressed */}
-            <button className="login-btn" disabled={isLoading}>Login</button>
+            <button className="auth-btn" disabled={isLoading}>Login</button>
             {error && <div className="error">{error}</div>}
         </form>
 
