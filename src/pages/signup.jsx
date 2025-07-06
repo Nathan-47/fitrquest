@@ -14,12 +14,6 @@ const Signup = () => {
         await signup(name, email, password)
     }
 
-    // if (error) {
-    //     const inputBox = document.querySelector('.input-box');
-    //     console.log(inputBox)
-    //     inputBox.classList.add('wrong')
-    // }
-
 
     return (
         <div className="col-12" id="signup-wrapper">
