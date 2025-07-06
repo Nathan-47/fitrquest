@@ -400,5 +400,19 @@ a {
 }
 .error {
   color: red;
+  position: absolute;
+  top: 17em;
+}
+
+@media screen and (max-width: 800px) {
+#signup-wrapper, #login-wrapper {width: 70%;}
+}
+
+@media screen and (max-width: 500px) {
+#signup-wrapper, #login-wrapper {width: 90%;}
+}
+
+@media screen and (max-width: 300px) {
+.auth-btn {width: 100%;}
 }
 
