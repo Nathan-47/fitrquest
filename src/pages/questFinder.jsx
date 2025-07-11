@@ -12,7 +12,6 @@ import questionLogo from '../images/fitrquest_logo.svg';
 import Quest from "../data/quest";
 
 
-
 const QuestFinder = () => {
 
 //useRef selectors
@@ -56,8 +55,7 @@ function CustomTabPanel(props) {
     };
   }
 
-
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
 
     const handleChange = (_event, newValue) => {
       setValue(newValue);
@@ -76,34 +74,25 @@ function CustomTabPanel(props) {
     }, [])
 
     
-    // Question handlers
+  // Question handlers
     const selectClickA = () => {
-        console.log('a clicked')
         const nextQ = Quest.find(question => question.id === currentQ.idNextQuestionA)
         if (nextQ) {
-                setCurrentQ(nextQ)
-        } else {
-            // FIXME: I dont know if this is needed?
-            navigate(`/result/${currentQ.questResultA}`)
+            setCurrentQ(nextQ)
         }
     }
 
     const selectClickB = () => {
-        console.log('b clicked')
         const nextQ = Quest.find(question => question.id === currentQ.idNextQuestionB)
         if (nextQ) {
             setCurrentQ(nextQ)
-        } else {
-            // FIXME: I dont know if this is needed?
-            navigate(`/result/${currentQ.questResultB}`)
         }
     }
+  // Question handlers
 
 
-    // show the hidden elents when user given results
-    console.log(currentQ.question)
+    // show the hidden elents when user is given results
     if (['Bodybuilding', 'Powerlifting', 'Crossfit/Hyrox'].includes(currentQ.question)) {
-        console.log('update me!')
         showImgRef.current?.classList.add('show');
         showVidsRef.current?.classList.add('show');
         showLinkRef.current?.classList.add('show');
@@ -112,81 +101,86 @@ function CustomTabPanel(props) {
         showRecContent.classList.add('show');
         showHelpVid.classList.add('show');
         showRestartBtn.classList.add('show');
-    }
+    } 
 
     // Display youtube videos 
     const ytvid = `https://www.youtube.com/embed/${currentQ.answerVideo}`;
     const eatvid = `https://www.youtube.com/embed/${currentQ.answerLink3}`;
     const recvid = `https://www.youtube.com/embed/${currentQ.recoveryvid}`;
-    console.log(currentQ.answerLink3);
 
-    // Display macro calculator link
+    // Display macro and training help links
     const macLink = `${currentQ.answerlink1}`;
     const macLink2 = `${currentQ.answerLink2}`;
     const recLink = `${currentQ.recoveryLink}`;
     const trainLink = `${currentQ.trainingLink}`;
-    console.log(currentQ.trainLink)
+
+    // Display Instagram profiles
+    const instaLink = `https://www.instagram.com/${currentQ.instaName}`;
+    const instaLink2 = `https://www.instagram.com/${currentQ.instaName2}`;
+    const instaLink3 = `https://www.instagram.com/${currentQ.instaName3}`;
 
 
     return (
-        <>
+    <>
+    <div className="container">
+      <div className="row">
+        <div className="question-wrapper">
+          <div className="question-logo"><img src={questionLogo} alt="fitrquest logo"/></div>
+          <div className="textsection">{currentQ.question}</div>
+          <div className="grid grid-cols-2 grid-rows-1 gap-2">
+            <button className="quiz-button" onClick={selectClickA}> 
+              {currentQ.answerA}
+            </button>
+            <button className="quiz-button" onClick={selectClickB}> 
+              {currentQ.answerB}
+            </button>
+          </div>
+        </div>
 
-        <div className="container">
-            <div className="row">
-              <div className="question-wrapper">
-              <div className="question-logo"><img src={questionLogo} alt="fitrquest logo"/></div>
-              <div className="textsection">{currentQ.question}</div>
-
-              <div className="grid grid-cols-2 grid-rows-1 gap-2">
-                <button className="quiz-button" onClick={selectClickA}> 
-                    {currentQ.answerA}
-                </button>
-                <button className="quiz-button" onClick={selectClickB}> 
-                  {currentQ.answerB}
-                </button>
-              </div>
-              </div>
-
-                <div className="quest-intro-snippet">{currentQ.intro}</div>
-                <div className="quest-intro">{currentQ.content}</div>
+        <div className="quest-intro-snippet">{currentQ.intro}</div>
+        <div className="quest-intro">{currentQ.content}</div>
                 
-          {/* Tabs */}
-                <div className="tab-wrapper" ref={showtabRef}>
-                    <Box sx={{ width: '100%' }}>
-                        <Box sx={{ borderBottom: 0}}>
-                            <Tabs value={value} onChange={handleChange}
-                             aria-label="Quest paths">
-                                <Tab label="Training" {...a11yProps(0)} />
-                                <Tab label="Nutrition" {...a11yProps(1)} />
-                                <Tab label="Recovery" {...a11yProps(2)} />
-                                <Tab label="Learn" {...a11yProps(3)} />
-                            </Tabs>
-                        </Box>
+        {/* Tabs */}
+        <div className="tab-wrapper" ref={showtabRef}>
+          <Box sx={{ width: '100%' }}>
+              <Box sx={{ borderBottom: 0}}>
+                <Tabs value={value} onChange={handleChange} aria-label="Quest paths">
+                  <Tab label="Training" {...a11yProps(0)} />
+                  <Tab label="Nutrition" {...a11yProps(1)} />
+                  <Tab label="Recovery" {...a11yProps(2)} />
+                  <Tab label="Learn" {...a11yProps(3)} />
+                </Tabs>
+              </Box>
 
         <CustomTabPanel value={value} index={0}>
-        <div className="quest-cal1">{currentQ.training}</div>
-        <br />
-            <a className="quest-link" href={trainLink} ref={showLinkRef}>[1] WOD Workouts - Find various beginner friendly workouts to modify at your pace</a>
+          <div className="quest-cal1">{currentQ.training}</div>
+          <br />
+          <a className="quest-link" href={trainLink} ref={showLinkRef}>[1] WOD Workouts - Find various beginner friendly workouts to modify at your pace</a>
         </CustomTabPanel>
 
         <CustomTabPanel value={value} index={1}>
-        <div className="quest-cal3">{currentQ.nutrition}</div>     
-        <br />      
-        <a className="quest-link" href={macLink} ref={showLinkRef}>[1] Macro Finder - Calculate what your macros should be determined by your given calories.</a>
-        <br />
-        <a className="quest-link" href={macLink2} ref={showLinkRef}>[2] Meal Planner - Struggling to plan meals? Have no fear, plan all your meals here. All meals macro nutrient friendly and easy to make.</a>
-        <br />
-        <a className="quest-link" href={eatvid} ref={showLinkRef}>[3] Beginners guide to using MyFitnessPal to help track calories</a>
+          <div className="quest-cal3">{currentQ.nutrition}</div>     
+          <br />    
+
+          <a className="quest-link" href={macLink} ref={showLinkRef}>[1] Macro Finder - Calculate what your macros should be determined by your given calories.</a>
+          <br />
+
+          <a className="quest-link" href={macLink2} ref={showLinkRef}>[2] Meal Planner - Struggling to plan meals? Have no fear, plan all your meals here. All meals are macro nutrient friendly and easy to make.</a>
+          <br />
+
+          <a className="quest-link" href={eatvid} ref={showLinkRef}>[3] Beginners guide to using MyFitnessPal to help track calories</a>
         </CustomTabPanel>
 
         <CustomTabPanel value={value} index={2}>
-        <div className="quest-cal4">{currentQ.recovery}</div>
-        <br />
-        <a className="ques-cal4" href={recLink}>Top 14 Tips for muscle recovery</a>
-        <br />
-        <div className="video" ref={showVidsRef}>
+          <div className="quest-cal4">{currentQ.recovery}</div>
+          <br />
+          
+          <a className="ques-cal4" href={recLink}>Top 14 Tips for muscle recovery</a>
+          <br />
+
+          <div className="video" ref={showVidsRef}>
             `<iframe id="video-frame" src={recvid}></iframe>`
-        </div>
+          </div>
         </CustomTabPanel>
 
         <CustomTabPanel value={value} index={3}>
@@ -210,24 +204,26 @@ function CustomTabPanel(props) {
       <p className="quest-rec-content">Here are amazing influencers that will assist you on your quest. Click on all below or type their name into various social media apps to engage and watch all their content.</p>
 
       <div class="columns-3">
-        {/* TODO:Add template literal for image alt tag */}
-        <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName}</p>
-      <img id="quest-image" className="col-4" ref={showImgRef} src={currentQ.imgFile} />
+      <a href={instaLink} target="_blank">
+      <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName}</p>
+      <img className="col-4" ref={showImgRef} src={currentQ.imgFile} alt={currentQ.altTag1}/>
+      </a>
 
+      <a href={instaLink2} target="_blank">
       <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName2}</p>
-      <img class="col-4" ref={showImgRef} src={currentQ.imgFile2}  />
-
+      <img className="col-4" ref={showImgRef} src={currentQ.imgFile2}  alt={currentQ.altTag2}/>
+      </a>
+      
+      <a href={instaLink3} target="_blank">
       <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName3}</p>
-      <img className="col-4" ref={showImgRef} src={currentQ.imgFile3}  />
+      <img className="col-4" ref={showImgRef} src={currentQ.imgFile3}  alt={currentQ.altTag3}/>
+      </a>
       </div>
 
-        {/* <img className="quest-image" ref={showImgRef} src={currentQ.imgFile} alt="bodybulding" /> */}
-
-        <p className="quest-help-heading">Helpful Videos</p>
-        {/* TODO: For vids add the hidden class on divs instead of CSS */}
-        <div className="video1" ref={showVidsRef}>
-            `<iframe id="video-frame" src={ytvid}></iframe>`
-        </div>
+      <p className="quest-help-heading">Helpful Videos</p>
+      <div className="video1" ref={showVidsRef}>
+        `<iframe id="video-frame" src={ytvid}></iframe>`
+      </div>
 
 
 
@@ -236,7 +232,7 @@ function CustomTabPanel(props) {
             </div>
         </div>
 
-        </>
+    </>
     )
 }
 
