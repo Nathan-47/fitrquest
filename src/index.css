@@ -126,6 +126,7 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  padding-top: 6em;
 }
 #quest-card {
   background-image: url('./images/journey_grid_hero.png');
@@ -135,19 +136,18 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  padding-top: 22em;
 }
-.hero-heading {
-  margin-bottom: 1em;
-}
-.comp-text {
-  margin-bottom: 10em;
+#hero-logo-wrapper {
+  justify-content: center;
 }
 #hero-logo {
-  width: 120px;
+  width: 200px;
+  height: auto;
+  padding: 30px;
 }
-.hero-slogan {
-  margin: 10px auto;
-  padding-left: 5em;
+.comp-text {
+  font-size: 1rem;
 }
 /* landing */
 
