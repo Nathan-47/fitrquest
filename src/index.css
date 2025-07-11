@@ -43,7 +43,8 @@ textarea:focus-visible,
 select:focus-visible {
     outline: 3px solid #292929;  
     outline-offset: 3px;      
-    background-color: #e6f0ff;
+    background-color: #fafafa;
+    color: #292929;
     transition: outline-color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -208,6 +209,11 @@ table {
 a {
   z-index: 10;
   position: relative; 
+}
+.quest-link {
+	color: #0097f1;
+	text-decoration: underline;
+  margin-top: 5px !important;
 }
 .quest-rec-heading {
   font-size: 1.4rem;
