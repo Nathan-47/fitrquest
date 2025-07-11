@@ -75,14 +75,22 @@ const Quest = [
         recoveryvid: 'PUJpU6Ti5jU',
 
         learn: 'Here are steps on how to program your bodybuilding future \n\n 1. Understand Bodybuilding Basics\n The primary focus is performing exercises that target muscle all muscle groups, often with a higher volume of sets and reps. You must include key principles such as progressive overload, proper form, muscle recovery, and consistency. \n\n  2. Set Your Goals \n Establish both short and long-term goals to stay motivated and focused on your physique development for example gaining muscle mass, improving body composition, or enhancing strength. \n\n 3. Choose a Program \n Beginners: If you"re new to bodybuilding, focus on full-body workouts that target all major muscle groups 3 times per week. Examples are using StrongLifts 5x5 or Full-Body Workout Split. These routines help build foundational strength and muscle mass.. \n\n  4. Track Your Progress \n Monitor your progress by tracking key metrics such as weight lifted, number of sets, reps, body measurements, and body composition. Regularly adjust your workouts to ensure continuous progression, making sure to focus on muscle recovery to avoid overtraining. \n\n  5. Nutrition \n Fuel your body with a balanced diet rich in lean proteins (chicken, fish, tofu), complex carbohydrates (sweet potatoes, rice), and healthy fats (avocados, nuts). Ensure you"re eating enough to support muscle growth, aiming for a slight calorie surplus if bulking or maintaining a calorie deficit if cutting.',
-        
+
         imgFile: 'src/images/influencers/sam_sulek.jpg',
         imgFile2: 'src/images/influencers/jeff_nippard.jpg',
         imgFile3: 'src/images/influencers/natasha_aughey.jpg',
+        
+        altTag1: 'Sam Sulek doing the double bicep pose',
+        altTag2: 'Jeff hitting the double bicep pose',
+        altTag3: 'natasha standing smiling at the',
 
         imgFileName:'Sam Sulek',
         imgFileName2:'Jeff Nippard',
         imgFileName3:'Natasha Aughey',
+
+        instaName: 'sam_sulek',
+        instaName2: 'jeffnippard',
+        instaName3: 'natashaughey_',
         
         answerInfo: '',
 
@@ -115,9 +123,17 @@ const Quest = [
         imgFile2: 'src/images/influencers/gym_reaper.jpg',
         imgFile3: 'src/images/influencers/russel_orhii.jpg',
 
+        altTag1: 'Brian in a camo cap looking to the left',
+        altTag2: 'Gym Reaper wearing his cap backwards about to spot someone benching',
+        altTag3: 'Russel hitting a bicep flex staring at the camera with a sweat band on',
+
         imgFileName:'Brian Alshrue',
         imgFileName2:'Gym Reaper',
         imgFileName3:'Russel Orhii',
+
+        instaLink: 'brian.alsruhe',
+        instaName2: 'bigboybake',
+        instaName3: 'russwole',
 
         answerInfo: '',
 
@@ -151,9 +167,17 @@ const Quest = [
         imgFile2: 'src/images/influencers/obi_vincent.jpg',
         imgFile3: 'src/images/influencers/team_richey.jpg',
 
+        altTag1: 'Lucy hitting the double bicep flex pose',
+        altTag2: 'Obi in a red hoodies sitting down looking away from camera',
+        altTag3: 'Team Richey with no top on flexing with a cap on',
+
         imgFileName:'Lucy Davis Fit',
         imgFileName2:'Obi Vincent',
         imgFileName3:'TeamRichey',
+
+        instaLink: 'lucydavis_fit',
+        instaName2: 'obi_vincent',
+        instaName3: 'carrichey',
 
         answerInfo: '',
 
