@@ -1,7 +1,6 @@
 import {createBrowserRouter, Route, createRoutesFromElements, RouterProvider} from 'react-router-dom';
 import Navbar from "./components/navbar";
 import Landing from "./pages/landing";
-import About from "./pages/about";
 import QuestFinder from './pages/questFinder';
 import Login from './pages/login';
 import Signup from './pages/signup';
@@ -19,10 +18,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Navbar />}>  
       <Route index element={<Landing/>} />
-
-      <Route path="about" element={<QuestFinder/>} />
-
-
+      <Route path="questpath" element={<QuestFinder/>} />
       <Route path="/comp" element={
       <ProtectedRoute>
       <Comp/>
