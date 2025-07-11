@@ -204,17 +204,17 @@ function CustomTabPanel(props) {
       <p className="quest-rec-content">Here are amazing influencers that will assist you on your quest. Click on all below or type their name into various social media apps to engage and watch all their content.</p>
 
       <div class="columns-3">
-      <a href={instaLink} target="_blank">
+      <a href={instaLink} aria-label={`Click to see ${currentQ.imgFileName} instagram profile`} target="_blank">
       <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName}</p>
       <img className="col-4" ref={showImgRef} src={currentQ.imgFile} alt={currentQ.altTag1}/>
       </a>
 
-      <a href={instaLink2} target="_blank">
+      <a href={instaLink2} aria-label={`Click to see ${currentQ.imgFileNam2} instagram profile`}  target="_blank">
       <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName2}</p>
       <img className="col-4" ref={showImgRef} src={currentQ.imgFile2}  alt={currentQ.altTag2}/>
       </a>
       
-      <a href={instaLink3} target="_blank">
+      <a href={instaLink3} aria-label={`Click to see ${currentQ.imgFileName3} instagram profile`}  target="_blank">
       <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName3}</p>
       <img className="col-4" ref={showImgRef} src={currentQ.imgFile3}  alt={currentQ.altTag3}/>
       </a>
