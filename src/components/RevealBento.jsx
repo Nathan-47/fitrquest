@@ -1,27 +1,22 @@
 "use strict";
 
-import React from 'react';
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import heroLogo from '../images/fitrquest_logo.png';
-import journeyhero from '../images/journey_grid_hero.png';
+import heroLogo from '../images/fitrquest_logo.svg';
 
 
 // Create the bento box design for landing 
 const RevealBento = () => {
   return (
-      <motion.div
-        initial="initial"
-        animate="animate"
-        transition={{
-          staggerChildren: 0.08,
-        }}
-        className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
-      >
-        <HeaderBlock />
-        <QuestBlock />
-        <AboutBlock />
-      </motion.div>
+  <motion.div 
+  initial="initial"
+  animate="animate"
+  transition={{ staggerChildren: 0.08,}}
+  className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4">
+    <HeaderBlock />
+    <QuestBlock />
+    <AboutBlock />
+  </motion.div>
   );
 };
 
@@ -61,50 +56,47 @@ const HeaderBlock = () => (
     scale: 1.03,
   }}
   className="col-span-12 row-span-1 md:col-span-6" id="landing-card">
-  <h1 className='hero-heading'>No Idea, Get Fit Here</h1>
-
-    <div className='grid grid-flow-col auto-cols-max'>
-    <img id="hero-logo" src={heroLogo} />
-    <a href="#" className="hero-slogan">Where's your next quest?
-    </a>
+    <div className='grid grid-flow-col auto-cols-max' id="hero-logo-wrapper">
+    <img id="hero-logo" src={heroLogo} alt="FitrQuest" />
     </div>
   </Block>
 );
 
 const QuestBlock = () => (
-  <>
+  <a href="/questpath" className="col-span-6 row-span-2 md:col-span-6">
     <Block
-      whileHover={{
-        scale: 1.03,
-      }}
-      className="col-span-6 row-span-2 md:col-span-6" id="quest-card"
-      
-    >
-      {/* <img className="journey-hero" src={journeyhero} /> */}
-      <h1>Take on the quest to fitness!</h1>
-      <a 
-      href="#" 
-      className="flex items-center gap-1 text-black-800 hover:underline"> Find your quest
-      </a>
+      whileHover={{ scale: 1.03 }}
+      id="quest-card"
+      className="relative h-full w-full overflow-hidden">
+
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-0" />
+
+      <div className="relative z-10 p-4 text-white">
+        <h1 className="block-heading text-xl font-bold">Take on the quest to fitness!</h1>
+        <p className="comp-text">Find your quest</p>
+      </div>
     </Block>
-  </>
+  </a>
 );
 
+
 const AboutBlock = () => (
-  <>
-  <Block 
-    whileHover={{
-    scale: 1.03,
-    }}
-  className="col-span-6 text-3x1" id="comp-card">
-    <h1>Questcomp</h1>
-    <p className='comp-text'>Get involved to win various prizes for your journey</p>
-    <a 
-      href="#" 
-      className="flex items-center gap-1 text-black-800 hover:underline"> Click to see more
-      </a>
-  </Block>
-  </>
+  <a href="/Comp" className="col-span-6">
+    <Block 
+      whileHover={{ scale: 1.03 }}
+      className="relative w-full h-full text-3xl cursor-pointer overflow-hidden"
+      id="comp-card">
+
+      <div className="absolute inset-0 bg-black bg-opacity-40 z-0" />
+
+      <div className="relative z-10 p-4 text-white">
+        <h1 className="block-heading text-xl font-bold">Questcomp</h1>
+        <p className="comp-text">Get involved to win various prizes for your journey</p>
+      </div>
+    </Block>
+  </a>
 );
+
+
 
 export default RevealBento;
