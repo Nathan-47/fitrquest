@@ -67,41 +67,49 @@ select:focus-visible {
   z-index: 100%;
 }
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  display: flex;
+  align-items: center; 
   width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-top: 2em;
+  padding: 2em !important;
 }
-li {
-  float: right;
+.nav-logo {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
-.nav-login {
-  color: #292929;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.nav-logo img {
+  height: 60px; 
+  object-fit: contain;
+}
+.nav-login,
+.nav-sign {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
   font-family: 'Public Sans', sans-serif;
-  margin: 15px 20px auto;
+  text-decoration: none;
+  color: #292929;
 }
 .nav-sign {
-  color: #292929;
-  display: block;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: 'Public Sans', sans-serif;
   background: #E6A22B;
-  margin: 15px 20px auto;
   margin-right: 3em;
   border-radius: 5px;
+  padding: 14px 16px;
+  cursor: pointer;
 }
 .nav-sign:hover {
   background: #292929;
   color: #E6A22B;
   transition: 0.2s;
 }
+.nav-login > span {margin-right: 4em;}
 /* navbar */
 
 /* landing */
