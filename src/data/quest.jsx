@@ -82,7 +82,7 @@ const Quest = [
         
         altTag1: 'Sam Sulek doing the double bicep pose',
         altTag2: 'Jeff hitting the double bicep pose',
-        altTag3: 'natasha standing smiling at the',
+        altTag3: 'natasha standing smiling at the camera',
 
         imgFileName:'Sam Sulek',
         imgFileName2:'Jeff Nippard',
