@@ -99,7 +99,7 @@ ul {
 .nav-sign {
   text-align: center;
   background: #E6A22B;
-  margin-right: 3em;
+  margin-right: 1em;
   border-radius: 5px;
   padding: 14px 16px;
   cursor: pointer;
@@ -115,7 +115,7 @@ ul {
 /* landing */
 .bento-grid {
   margin-top: 5em;
-  padding: 20px auto;
+  padding: 2em;
 }
 .journey-hero {
   width: 250px;
@@ -282,6 +282,21 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+#comp-card {
+    padding-top: 11em;
+}  
+.bento-grid {
+    margin-top: 1em;
+}
+}
+
+@media screen and (max-width: 640px) {
+.col-span-6 {
+    grid-column: span 12 / span 6;
+}
+}
+
 @media screen and (max-width: 620px) {
 .question-wrapper {
     padding: 4em;
@@ -309,6 +324,9 @@ a {
     height: 250px;
     padding: 0em;
   }
+  .bento-grid {
+    padding: 1em;
+}
 }
 
 @media screen and (max-width: 370px) {
