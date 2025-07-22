@@ -92,6 +92,7 @@ ul {
   display: flex;
   align-items: center;
   padding: 0.5em 1em;
+  gap: 0.5rem;
   font-family: 'Public Sans', sans-serif;
   text-decoration: none;
   color: #292929;
@@ -99,7 +100,6 @@ ul {
 .nav-sign {
   text-align: center;
   background: #E6A22B;
-  margin-right: 1em;
   border-radius: 5px;
   padding: 14px 16px;
   cursor: pointer;
