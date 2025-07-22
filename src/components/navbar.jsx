@@ -30,7 +30,7 @@ return (
 
         {!user && (
         <NavLink to="/login" className="nav-sign">
-            <li>Login</li>
+            Login
         </NavLink>       
         )}
     </ul>    
