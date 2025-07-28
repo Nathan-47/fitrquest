@@ -8,7 +8,7 @@ const Comp = () => {
             <div className="row">
                 <div class="grid grid-cols-3 gap-4">
                     <div class="col-span-1">
-                        <img src={compImg1} alt='#'/>
+                        <img className="supp-img" src={compImg1} alt='Image shows JAAQ fitness app on a iphone and RAW nutrition supplement bottles'/>
                     </div>
                     <div class="col-span-2">
                         <h1>What can be won</h1>
@@ -25,13 +25,13 @@ const Comp = () => {
                         <p>There will be THREE  winners from three categories. How a winner is selected is from other Questers on what video or photo is their favourite for the month. To enter upload video or photo to any social media and tag the following  #FitrChallenge.</p>
                     </div>
                     <div class="col-span-1">
-                        <img src={compImg2} alt='#'/>
+                        <img className="mobile-img" src={compImg2} alt='A tablet and iphone that both have a fitrquest instagram review story being filled out'/>
                     </div>
                 </div>
 
                 {/* submit clip button */}
                 <div className='submit-wrapper'>
-                    <a href="#"><button className='submitBtn'>Submit clip</button></a>
+                    <a href="#"><div className='submitBtn'>Submit clip</div></a>
                 </div>
             </div>
         </div>
