@@ -157,6 +157,15 @@ ul {
 .comp-text {
   font-size: 1rem;
 }
+
+@media screen and (max-width: 500px) {
+  .nav-login > span {margin-right: 1em;}
+}
+
+@media screen and (max-width: 400px) {
+  .nav-login {flex-direction: column-reverse;}
+  .nav-login > span {margin-right: -1em;}
+}
 /* landing */
 
 
@@ -175,11 +184,11 @@ table {
 
 /* comp */
 .list-disc {display: block;}
-.col-span-1 {padding: 2em;}
+.col-span-1 {padding: 1em;}
 .col-span-2 {
     margin-bottom: 4em;
-    margin-top: 4em;
-    padding: 1em;
+    margin-top: 3em;
+    padding: 1em 8em;
 }
 .submit-wrapper {
   display: flex;
@@ -190,8 +199,52 @@ table {
   background: #E6A22B;
   border-radius: 5px;
   padding: 14px 16px;
+  margin-top: -2em !important;
+  margin-bottom: 3em;
   font-weight: 800;
   font-family: 'Outfit', sans-serif;
+}
+
+@media screen and (max-width: 1400px) {
+  .col-span-2 {padding: 1em 3em !important;}
+}
+
+@media screen and (max-width: 1200px) {
+  .col-span-2 {
+    margin-bottom: 1em;
+    margin-top: 3em;
+  }
+  .submitBtn {margin-top: 0em !important;}
+  .supp-img {margin-top: 5em;}
+}
+
+@media screen and (max-width: 1024px) {
+  .col-span-2 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+  .mobile-img {margin-top: 1em;}
+}
+
+@media screen and (max-width: 950px) {
+  .col-span-2 {padding: 1em 1em !important;}
+}
+
+@media screen and (max-width: 720px) {
+  .grid-cols-3 {grid-template-columns: repeat(1, minmax(0, 1fr));}
+  .supp-img, .mobile-img {
+    margin-top: 1em;
+    width: 300px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .col-span-1 {margin-top: 1em;}
+  .col-span-2 {
+    padding: 1em 0em !important;
+    margin-bottom: -2em;
+  }
 }
 
 
