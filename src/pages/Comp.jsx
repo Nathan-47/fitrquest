@@ -1,9 +1,57 @@
+"use strict";
+
+import { motion } from "framer-motion";
+import { twMerge } from "tailwind-merge";
 import compImg1 from '../images/competition/comp_rewards.png'
 import compImg2 from '../images/competition/comp_insta_stories.png'
 
 
-const Comp = () => {
-    return (
+
+    const Comp = () => {
+        return (
+          <motion.div 
+          initial="initial"
+          animate="animate"
+          transition={{ staggerChildren: 0.08,}}>
+            <CompBlock />
+          </motion.div>
+        );
+    };
+
+    const Block = ({ className, ...rest }) => {
+        return (
+            <motion.div
+            variants={{
+            initial: {
+            scale: 0.5,
+            y: 50,
+            opacity: 0,
+            },
+            animate: {
+            scale: 1,
+            y: 0,
+            opacity: 1,
+            },
+      }}
+      transition={{
+        type: "spring",
+        mass: 3,
+        stiffness: 400,
+        damping: 50,
+      }}
+      className={twMerge(
+        "col-span-4 rounded-lg p-6",
+        className
+      )}
+      {...rest}
+    />
+  );
+};
+
+
+    const CompBlock = () => {
+        return (
+            <Block>
         <div className="container">
             <div className="row">
                 <div class="grid grid-cols-3 gap-4">
@@ -35,6 +83,7 @@ const Comp = () => {
                 </div>
             </div>
         </div>
+        </Block>
     );
 };
 
