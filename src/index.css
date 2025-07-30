@@ -265,7 +265,7 @@ table {
   justify-content: center;
   display: grid;
   padding: 5em;
-  padding-top: 5em;
+  padding-top: 3em;
 }
 .quest-intro-snippet {
   font-size: 1.5rem;
@@ -382,7 +382,7 @@ a {
 .question-wrapper {
     padding: 4em;
     /* margin-left: -2em; */
-    margin-top: 2em;
+    margin-top: -2em;
 }
 .quest-intro-snippet {margin-top: -1em;}
 }
