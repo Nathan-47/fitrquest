@@ -128,12 +128,21 @@ function CustomTabPanel(props) {
           <div className="question-logo"><img src={questionLogo} alt="fitrquest logo"/></div>
           <div className="textsection">{currentQ.question}</div>
           <div className="grid grid-cols-2 grid-rows-1 gap-2">
-            <button className="quiz-button" onClick={selectClickA}> 
+            
+            <button 
+            className="quiz-button"  
+            aria-label={`Answer A: ${currentQ.answerA}`}
+            onClick={selectClickA}> 
               {currentQ.answerA}
             </button>
-            <button className="quiz-button" onClick={selectClickB}> 
+
+            <button 
+            className="quiz-button" 
+            aria-label={`Answer B: ${currentQ.answerB}`}
+            onClick={selectClickB}> 
               {currentQ.answerB}
             </button>
+
           </div>
         </div>
 
