@@ -29,7 +29,7 @@ app.use('/user/protected', protectedRoutes);
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     app.listen(process.env.PORT, () => {
-        console.log('Connected to db & Server is running', process.env.PORT)
+        console.log('Server connected', process.env.PORT)
     })
 })
 .catch((error) => {
