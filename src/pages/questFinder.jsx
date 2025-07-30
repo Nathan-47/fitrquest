@@ -222,7 +222,7 @@ function CustomTabPanel(props) {
 
       <p className="quest-help-heading">Helpful Videos</p>
       <div className="video1" ref={showVidsRef}>
-        `<iframe id="video-frame" src={ytvid}></iframe>`
+        `<iframe id="video-frame" src={ytvid} title="Helpful video to help with planning exercises depending on quest plan"></iframe>`
       </div>
 
 
