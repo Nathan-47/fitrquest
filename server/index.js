@@ -24,6 +24,13 @@ app.use('/user', userRoutes);
 // for protected pages in this case the /comp page
 app.use('/user/protected', protectedRoutes);
 
+// connect to frontend
+app.use(cors({
+    origin: 'https://fitrquest-frontend.onrender.com',
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 // connect to database
 mongoose.connect(process.env.MONGO_URI)
