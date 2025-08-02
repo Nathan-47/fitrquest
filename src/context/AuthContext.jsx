@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 export const AuthContext = createContext()
 
-// TODO: Need to watch previous video on React Context to understand this
 export const authReducer = (state, action) => {
     switch (action.type) {
         case 'LOGIN':
