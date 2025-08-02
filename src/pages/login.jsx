@@ -46,7 +46,7 @@ const Login = () => {
             {error && <div className="error">{error}</div>}
         </form>
 
-            <p className="no-login">Don't have an account? <a className="account-link" href="http://localhost:5173/signup">Sign Up</a></p>
+            <p className="no-login">Don't have an account? <a className="account-link" href="https://fitrquest-frontend.onrender.com/signup">Sign Up</a></p>
         </div>
     )
 }
