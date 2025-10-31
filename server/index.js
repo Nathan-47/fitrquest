@@ -28,8 +28,6 @@ app.use('/user/protected', protectedRoutes);
 app.use(cors({
     origin: 'https://fitrquest-frontend.onrender.com',
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 // connect to database
