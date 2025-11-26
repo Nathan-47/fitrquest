@@ -459,7 +459,7 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 4em;
+  margin-top: 0em;
   flex-direction: column;
   align-items: center; 
 }
@@ -468,20 +468,21 @@ a {
   display: flex;
   justify-content: center;
   width: 45%;
-  margin-top: 4em;
+  margin-top: 0em;
   flex-direction: column;
   align-items: center; 
 }
 .login-logo {
   width: 100px;
   margin: auto;
+  margin-top: -2.5em;
 }
 .auth-title {
   font-size: 2rem;
   font-weight: 700;
   font-family: 'Outfit', sans-serif;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
 }
 .input-box, .password-input {
@@ -506,7 +507,7 @@ a {
   border: 2px solid #000;
   transition: 0.1s ease-in;
 }
-.no-login {margin-top: 4em;}
+.no-login {margin-top: 2em;}
 .account-link {
   color: #0097f1;
   font-weight: 800;
@@ -523,9 +524,5 @@ a {
 
 @media screen and (max-width: 500px) {
 #signup-wrapper, #login-wrapper {width: 90%;}
-}
-
-@media screen and (max-width: 300px) {
 .auth-btn {width: 100%;}
 }
-
