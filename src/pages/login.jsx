@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useLogin } from "../hooks/useLogin"
-import logo from "../images/fitrquest_logo.svg"
 
 
 const Login = () => {
@@ -19,14 +18,12 @@ const Login = () => {
         <div className="col-12" id="login-wrapper">
         <form className="login" onSubmit={handleSubmit}>
 
-            <img className="login-logo" src={logo} alt="fitrquest logo" />
-
             <h3 className="auth-title">Login</h3>
             <label>Email</label>
             <input
             className="input-box"
             type="email"
-            placeholder="Email"
+            placeholder="Email Address"
             // onchange handler so that when change happens we want to update the email state
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -46,7 +43,8 @@ const Login = () => {
             {error && <div className="error">{error}</div>}
         </form>
 
-            <p className="no-login">Don't have an account? <a className="account-link" href="https://fitrquest-frontend.onrender.com/signup">Sign Up</a></p>
+            <p className="no-login">Don't have an account? <a className="account-link" href="http://localhost:5174/signup">Sign Up</a></p>
+            {/* https://fitrquest-frontend.onrender.com/signup */}
         </div>
     )
 }
