@@ -53,8 +53,7 @@ const Signup = () => {
         {error && <div className="error">{error}</div>}
         </form>
 
-            <p className="no-login">Already signed up? <a className="account-link" href="http://localhost:5174/login">Login</a>
-            {/* https://fitrquest-frontend.onrender.com/login */}
+            <p className="no-login">Already signed up? <a className="account-link" href="https://fitrquest-frontend.onrender.com/login">Login</a>
             </p>
         </div>
     )
