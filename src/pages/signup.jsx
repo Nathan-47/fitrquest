@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useSignup } from "../hooks/useSignup"
-import logo from "../images/fitrquest_logo.svg"
 
 const Signup = () => {
     const [name, setName] = useState('')
@@ -19,14 +18,12 @@ const Signup = () => {
         <div className="col-12" id="signup-wrapper">
         <form className="signup" onSubmit={handleSubmit}>
 
-            <img className="login-logo" src={logo} alt="fitrquest logo" />
-
             <h3 className="auth-title">Sign up</h3>
             <label>Name:</label>
             <input
             className="input-box"
             type="name"
-            placeholder="Thierry Henry"
+            placeholder="John Doe"
             // onchange handler so that when change happens we want to update the name state
             onChange={(e) => setName(e.target.value)}
             value={name}
@@ -36,7 +33,7 @@ const Signup = () => {
             <input
             className="input-box"
             type="email"
-            placeholder="theking14@gmail.com"
+            placeholder="johndoe@gmail.com"
             // onchange handler so that when change happens we want to update the email state
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -56,7 +53,8 @@ const Signup = () => {
         {error && <div className="error">{error}</div>}
         </form>
 
-            <p className="no-login">Already signed up? <a className="account-link" href="https://fitrquest-frontend.onrender.com/login">Login</a>
+            <p className="no-login">Already signed up? <a className="account-link" href="http://localhost:5174/login">Login</a>
+            {/* https://fitrquest-frontend.onrender.com/login */}
             </p>
         </div>
     )
