@@ -76,9 +76,9 @@ const Quest = [
 
         learn: 'Here are steps on how to program your bodybuilding future \n\n 1. Understand Bodybuilding Basics\n The primary focus is performing exercises that target muscle all muscle groups, often with a higher volume of sets and reps. You must include key principles such as progressive overload, proper form, muscle recovery, and consistency. \n\n  2. Set Your Goals \n Establish both short and long-term goals to stay motivated and focused on your physique development for example gaining muscle mass, improving body composition, or enhancing strength. \n\n 3. Choose a Program \n Beginners: If you"re new to bodybuilding, focus on full-body workouts that target all major muscle groups 3 times per week. Examples are using StrongLifts 5x5 or Full-Body Workout Split. These routines help build foundational strength and muscle mass.. \n\n  4. Track Your Progress \n Monitor your progress by tracking key metrics such as weight lifted, number of sets, reps, body measurements, and body composition. Regularly adjust your workouts to ensure continuous progression, making sure to focus on muscle recovery to avoid overtraining. \n\n  5. Nutrition \n Fuel your body with a balanced diet rich in lean proteins (chicken, fish, tofu), complex carbohydrates (sweet potatoes, rice), and healthy fats (avocados, nuts). Ensure you"re eating enough to support muscle growth, aiming for a slight calorie surplus if bulking or maintaining a calorie deficit if cutting.',
 
-        imgFile: 'src/images/influencers/sam_sulek.jpg',
-        imgFile2: 'src/images/influencers/jeff_nippard.jpg',
-        imgFile3: 'src/images/influencers/natasha_aughey.jpg',
+        imgFile: '/images/influencers/sam_sulek.jpg',
+        imgFile2: '/images/influencers/jeff_nippard.jpg',
+        imgFile3: '/images/influencers/natasha_aughey.jpg',
         
         altTag1: 'Sam Sulek doing the double bicep pose',
         altTag2: 'Jeff hitting the double bicep pose',
@@ -119,9 +119,9 @@ const Quest = [
 
         learn: 'Here are steps on how to program your Powerlifting future \n\n 1. Understand Powerlifting Basics\n Powerlifting focuses on three lifts: squat, bench press, and deadlift. Key principles include progressive overload, proper form, and consistency. \n\n  2. Set Your Goals \n Define short-term and long-term goals (e.g., increasing your 1RM). Use/research the SMART goal system to stay focused and motivated. \n\n 3. Choose a Program \n Start with beginner programs like Starting Strength for fundamental strength, or try 5/3/1 for flexibility as you progress. Advanced lifters can explore Westside Barbell for specialized methods. \n\n  4. Track Your Progress \n Track your lifts, volume, and intensity weekly. Adjust your training to ensure gradual improvement without overtraining. \n\n  5. Nutrition \n Fuel your body with a balanced diet rich in lean proteins (chicken, fish, tofu), complex carbohydrates (sweet potatoes, rice), and healthy fats (avocados, nuts). Ensure you"re eating enough to support muscle growth, aiming for a calorie surplus. \n\n 6. Sample Weekly Plan \n Beginners: Squat, bench, and deadlift (3x a week). \n Advanced: Max effort days for each lift, plus accessory work.',
         
-        imgFile: 'src/images/influencers/brian_alshrue.jpg',
-        imgFile2: 'src/images/influencers/gym_reaper.jpg',
-        imgFile3: 'src/images/influencers/russel_orhii.jpg',
+        imgFile: '/images/influencers/brian_alshrue.jpg',
+        imgFile2: '/images/influencers/gym_reaper.jpg',
+        imgFile3: '/images/influencers/russel_orhii.jpg',
 
         altTag1: 'Brian in a camo cap looking to the left',
         altTag2: 'Gym Reaper wearing his cap backwards about to spot someone benching',
@@ -163,9 +163,9 @@ const Quest = [
         learn: 'Here are steps on how to program your Crosfit/hyrox future \n\n 1. Set Your Goals\n Powerlifting focuses on three lifts: squat, bench press, and deadlift. Key principles include progressive overload, proper form, and consistency. \n\n 2. Choose a Program \n Focus on workouts that combine weightlifting, gymnastics, and metabolic conditioning (WODs). \n\n 3. Track Your Progress \n Record your times, reps, and weights during each workout. Regularly test yourself with benchmark WODs or Hyrox simulations to gauge improvement. \n\n  4. Nutrition & Recovery \n Fuel your body with balanced macros, especially carbs for energy and protein for recovery. Make recovery a priority with proper sleep, stretching, and active rest days. \n\n  5. Sample Weekly Plan \n 3-5 WODs per week, mixing strength, cardio, and gymnastics.',
         
         
-        imgFile: 'src/images/influencers/lucy_davis.jpg',
-        imgFile2: 'src/images/influencers/obi_vincent.jpg',
-        imgFile3: 'src/images/influencers/team_richey.jpg',
+        imgFile: '/images/influencers/lucy_davis.jpg',
+        imgFile2: '/images/influencers/obi_vincent.jpg',
+        imgFile3: '/images/influencers/team_richey.jpg',
 
         altTag1: 'Lucy hitting the double bicep flex pose',
         altTag2: 'Obi in a red hoodies sitting down looking away from camera',
