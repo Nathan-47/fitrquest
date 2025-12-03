@@ -76,9 +76,9 @@ const Quest = [
 
         learn: 'Here are steps on how to program your bodybuilding future \n\n 1. Understand Bodybuilding Basics\n The primary focus is performing exercises that target muscle all muscle groups, often with a higher volume of sets and reps. You must include key principles such as progressive overload, proper form, muscle recovery, and consistency. \n\n  2. Set Your Goals \n Establish both short and long-term goals to stay motivated and focused on your physique development for example gaining muscle mass, improving body composition, or enhancing strength. \n\n 3. Choose a Program \n Beginners: If you"re new to bodybuilding, focus on full-body workouts that target all major muscle groups 3 times per week. Examples are using StrongLifts 5x5 or Full-Body Workout Split. These routines help build foundational strength and muscle mass.. \n\n  4. Track Your Progress \n Monitor your progress by tracking key metrics such as weight lifted, number of sets, reps, body measurements, and body composition. Regularly adjust your workouts to ensure continuous progression, making sure to focus on muscle recovery to avoid overtraining. \n\n  5. Nutrition \n Fuel your body with a balanced diet rich in lean proteins (chicken, fish, tofu), complex carbohydrates (sweet potatoes, rice), and healthy fats (avocados, nuts). Ensure you"re eating enough to support muscle growth, aiming for a slight calorie surplus if bulking or maintaining a calorie deficit if cutting.',
 
-        imgFile: '/images/influencers/sam_sulek.jpg',
-        imgFile2: '/images/influencers/jeff_nippard.jpg',
-        imgFile3: '/images/influencers/natasha_aughey.jpg',
+        imgFile: new URL('../images/influencers/sam_sulek.jpg', import.meta.url).href,
+        imgFile2: new URL('../images/influencers/jeff_nippard.jpg', import.meta.url).href,
+        imgFile3: new URL('../images/influencers/natasha_aughey.jpg', import.meta.url).href,
         
         altTag1: 'Sam Sulek doing the double bicep pose',
         altTag2: 'Jeff hitting the double bicep pose',
