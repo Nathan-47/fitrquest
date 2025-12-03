@@ -300,7 +300,7 @@ a {
   position: relative; 
 }
 .quest-link {
-	color: #0097f1;
+	color: #005180;
 	text-decoration: underline;
   margin-top: 5px !important;
 }
@@ -438,6 +438,9 @@ a {
   .css-hzcega-MuiTabs-list {
     display: flex;
     flex-direction: column;
+}
+.css-6p016c.Mui-selected {
+    color: #005180 !important;
 }
 .css-1usuzwp-MuiButtonBase-root-MuiTab-root {
     max-width: 100% !important;
