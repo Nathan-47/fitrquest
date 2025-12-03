@@ -1,6 +1,12 @@
 import natasha from '../images/influencers/natasha_aughey.jpg';
 import jeff from '../images/influencers/jeff_nippard.jpg';
 import sam from '../images/influencers/sam_sulek.jpg';
+import brian from '../images/influencers/brian_alshrue.jpg';
+import baker from '../images/influencers/gym_reaper.jpg'; 
+import russel from '../images/influencers/russel_orhii.jpg';
+import lucy from '../images/influencers/lucy_davis.jpg';
+import obi from '../images/influencers/obi_vincent.jpg';
+import richey from '../images/influencers/team_richey.jpg';
 
 const Quest = [
     {
@@ -123,9 +129,9 @@ const Quest = [
 
         learn: 'Here are steps on how to program your Powerlifting future \n\n 1. Understand Powerlifting Basics\n Powerlifting focuses on three lifts: squat, bench press, and deadlift. Key principles include progressive overload, proper form, and consistency. \n\n  2. Set Your Goals \n Define short-term and long-term goals (e.g., increasing your 1RM). Use/research the SMART goal system to stay focused and motivated. \n\n 3. Choose a Program \n Start with beginner programs like Starting Strength for fundamental strength, or try 5/3/1 for flexibility as you progress. Advanced lifters can explore Westside Barbell for specialized methods. \n\n  4. Track Your Progress \n Track your lifts, volume, and intensity weekly. Adjust your training to ensure gradual improvement without overtraining. \n\n  5. Nutrition \n Fuel your body with a balanced diet rich in lean proteins (chicken, fish, tofu), complex carbohydrates (sweet potatoes, rice), and healthy fats (avocados, nuts). Ensure you"re eating enough to support muscle growth, aiming for a calorie surplus. \n\n 6. Sample Weekly Plan \n Beginners: Squat, bench, and deadlift (3x a week). \n Advanced: Max effort days for each lift, plus accessory work.',
         
-        imgFile: '/images/influencers/brian_alshrue.jpg',
-        imgFile2: '/images/influencers/gym_reaper.jpg',
-        imgFile3: '/images/influencers/russel_orhii.jpg',
+        imgFile: brian,
+        imgFile2: baker,
+        imgFile3: russel,
 
         altTag1: 'Brian in a camo cap looking to the left',
         altTag2: 'Gym Reaper wearing his cap backwards about to spot someone benching',
@@ -167,9 +173,9 @@ const Quest = [
         learn: 'Here are steps on how to program your Crosfit/hyrox future \n\n 1. Set Your Goals\n Powerlifting focuses on three lifts: squat, bench press, and deadlift. Key principles include progressive overload, proper form, and consistency. \n\n 2. Choose a Program \n Focus on workouts that combine weightlifting, gymnastics, and metabolic conditioning (WODs). \n\n 3. Track Your Progress \n Record your times, reps, and weights during each workout. Regularly test yourself with benchmark WODs or Hyrox simulations to gauge improvement. \n\n  4. Nutrition & Recovery \n Fuel your body with balanced macros, especially carbs for energy and protein for recovery. Make recovery a priority with proper sleep, stretching, and active rest days. \n\n  5. Sample Weekly Plan \n 3-5 WODs per week, mixing strength, cardio, and gymnastics.',
         
         
-        imgFile: '/images/influencers/lucy_davis.jpg',
-        imgFile2: '/images/influencers/obi_vincent.jpg',
-        imgFile3: '/images/influencers/team_richey.jpg',
+        imgFile: lucy,
+        imgFile2: obi,
+        imgFile3: richey,
 
         altTag1: 'Lucy hitting the double bicep flex pose',
         altTag2: 'Obi in a red hoodies sitting down looking away from camera',
