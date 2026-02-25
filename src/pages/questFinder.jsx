@@ -127,17 +127,17 @@ function CustomTabPanel(props) {
         <div className="question-wrapper">
           <div className="question-logo"><img src={questionLogo} alt="fitrquest logo"/></div>
           <div className="textsection">{currentQ.question}</div>
-          <div className="grid grid-cols-2 grid-rows-1 gap-2">
+          <div className="contents">
             
             <button 
-            className="quiz-button"  
+            className="quiz-button p-4"  
             aria-label={`Answer A: ${currentQ.answerA}`}
             onClick={selectClickA}> 
               {currentQ.answerA}
             </button>
 
             <button 
-            className="quiz-button" 
+            className="quiz-button p-4" 
             aria-label={`Answer B: ${currentQ.answerB}`}
             onClick={selectClickB}> 
               {currentQ.answerB}
@@ -210,9 +210,9 @@ function CustomTabPanel(props) {
 
       <p className="quest-rec-heading">Influencer Recommendation</p>
       
-      <p className="quest-rec-content">Here are amazing influencers that will assist you on your quest. Click on all below or type their name into various social media apps to engage and watch all their content.</p>
+      <p className="quest-rec-content">Here are amazing influencer's that will assist you on your quest. Click on all below or type their name into various social media apps to engage and watch all their content.</p>
 
-      <div class="columns-3">
+      <div className="columns-3">
       <a href={instaLink} aria-label={`Click to see ${currentQ.imgFileName} instagram profile`} target="_blank">
       <p className="influencer-names" ref={showImgRef}>{currentQ.imgFileName}</p>
       <img className="col-4" ref={showImgRef} src={currentQ.imgFile} alt={currentQ.altTag1}/>
