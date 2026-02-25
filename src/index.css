@@ -419,43 +419,6 @@ a {
 }
 
 
-/* tabs */
-.css-1qltlow-MuiTabs-indicator {
-  font-weight: 800;
-  border: 3px solid #E6A22B !important;
-}
-.css-hzcega-MuiTabs-list {
-    justify-content: center;
-}
-.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
-    font-family: 'Outfit';
-    font-weight: 800 !important;
-    font-size: 1.1rem;
-    color: #292929 !important;
-}
-
-@media screen and (max-width: 460px) {
-  .css-hzcega-MuiTabs-list {
-    display: flex;
-    flex-direction: column;
-}
-.css-6p016c.Mui-selected {
-    color: #005180 !important;
-}
-.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
-    max-width: 100% !important;
-    width: 100%;
-}
-.css-1usuzwp-MuiButtonBase-root-MuiTab-root:focus {
-    color: white !important;
-    background: #292929 !important;
-}
-.css-1qltlow-MuiTabs-indicator {
-  display: none !important;
-}
-}
-
-
 /* login page */
 #login-wrapper {
   margin: 5px auto;
