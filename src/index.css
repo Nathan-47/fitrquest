@@ -28,7 +28,6 @@ h1 {
   font-family: 'Public Sans', sans-serif;
   font-size: 1.5rem;
 }
-
 .container {
   max-width: 1280px;
   margin: auto;
@@ -275,14 +274,6 @@ table {
 }
 .quest-intro {
   margin-bottom: 2em;
-}
-.quiz-button {
-  z-index: 1;
-  position: relative;
-  text-align: left;
-  font-family: 'Outfit', sans-serif;
-  text-align: center;
-  font-size: 1.6rem;
 }
 .textsection {
   font-family: 'Public Sans', sans-serif;
