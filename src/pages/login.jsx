@@ -13,7 +13,6 @@ const Login = () => {
         await login(email, password)
     }
 
-
     return (
         <div className="col-12" id="login-wrapper">
         <form className="login" onSubmit={handleSubmit}>
