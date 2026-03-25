@@ -368,7 +368,7 @@ const QuestFinder = () => {
           <Link
             to="/"
             className="restartBtn"
-            aria-label="Restart Quest"
+            aria-label="Go back to home"
           >
             Restart Quest
           </Link>
