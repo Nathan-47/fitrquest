@@ -20,6 +20,7 @@ const QuestFinder = () => {
   const showRecContent = document.querySelector(".quest-rec-content");
   const showHelpVid = document.querySelector(".quest-help-heading");
   const showRestartBtn = document.querySelector(".restartBtn");
+  const hideQuestion = document.querySelector(".question-wrapper");
 
   // tabs function component
   function CustomTabPanel(props) {
@@ -87,7 +88,7 @@ const QuestFinder = () => {
   };
   // Question handlers
 
-  // show the hidden elents when user is given results
+  // show the hidden elements when user is given results
   if (
     ["Bodybuilding", "Powerlifting", "Crossfit/Hyrox"].includes(
       currentQ.question,
@@ -101,6 +102,7 @@ const QuestFinder = () => {
     showRecContent.classList.add("show");
     showHelpVid.classList.add("show");
     showRestartBtn.classList.add("show");
+    hideQuestion.classList.add("hidden");
   }
 
   // Display youtube videos
@@ -130,7 +132,7 @@ const QuestFinder = () => {
             <div className="textsection">{currentQ.question}</div>
             <div className="contents">
               <button
-                className="quiz-button p-4"
+                className="p-4 bg-black text-white rounded-lg  hover:bg-[#E6A22B] hover:text-black"
                 aria-label={`Answer A: ${currentQ.answerA}`}
                 onClick={selectClickA}
               >
@@ -138,7 +140,7 @@ const QuestFinder = () => {
               </button>
 
               <button
-                className="quiz-button p-4"
+                className="p-4 bg-black text-white mt-5 rounded-lg hover:bg-[#E6A22B] hover:text-black"
                 aria-label={`Answer B: ${currentQ.answerB}`}
                 onClick={selectClickB}
               >
@@ -363,14 +365,11 @@ const QuestFinder = () => {
             `
           </div>
 
-          {/* FIXME: Link back to quest page once created */}
           <Link
             to="/"
-            onClick={() => window.location.reload()}
             className="restartBtn"
             aria-label="Restart Quest"
           >
-            {" "}
             Restart Quest
           </Link>
         </div>
