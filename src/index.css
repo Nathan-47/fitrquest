@@ -179,6 +179,9 @@ table {
 .show {
   display: block;
 }
+.hidden {
+  display: none !important;
+}
 
 
 /* comp */
@@ -270,7 +273,7 @@ table {
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 1em;
-  margin-top: -4em;
+  margin-top: 0em;
 }
 .quest-intro {
   margin-bottom: 2em;
@@ -315,11 +318,13 @@ a {
   margin-bottom: 4em;
 }
 .columns-3 img {
-  margin: 10px auto;
-  text-align: center;
+    margin: 5px auto;
+    text-align: center;
+    display: inline-block;
 }
 .influencer-names {
-  text-align: center;
+  text-align: justify;
+  margin: 5px auto;
 }
 #video-frame {
   width: 100%;
@@ -375,7 +380,7 @@ a {
     /* margin-left: -2em; */
     margin-top: -2em;
 }
-.quest-intro-snippet {margin-top: -1em;}
+.quest-intro-snippet {margin-top: 0em;}
 }
 
 @media screen and (max-width: 600px) {
