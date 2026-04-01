@@ -36,9 +36,11 @@ export interface QuestType {
   altTag2?: string;
   altTag3?: string;
 
-  instaName?: string;
+  instaLink?: string;
+  instaName?: string
   instaName2?: string;
   instaName3?: string;
 
   answerVideo?: string;
+  answerInfo?: string;
 }
