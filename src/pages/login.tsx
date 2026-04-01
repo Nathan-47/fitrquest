@@ -1,0 +1,58 @@
+import { useState, JSX, FormEvent } from "react";
+import { useLogin } from "../hooks/useLogin";
+import { Link } from "react-router-dom";
+
+const Login = (): JSX.Element => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const { login, error, isLoading } = useLogin();
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    await login(email, password);
+  };
+
+  return (
+    <div className="col-12" id="login-wrapper">
+      <form className="login" onSubmit={handleSubmit}>
+        <h3 className="auth-title">Login</h3>
+        <label>Email</label>
+        <input
+          className="input-box"
+          type="email"
+          placeholder="Email Address"
+          // onchange handler so that when change happens we want to update the email state
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+
+        <label>Password</label>
+        <input
+          className="password-input"
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+        />
+
+        {/* // while button is loading button cannot be pressed */}
+        <button className="auth-btn" disabled={isLoading || false}>
+          Login
+        </button>
+        {error && <div className="error">{error}</div>}
+      </form>
+
+      <p className="no-login">
+        Don't have an account?{" "}
+        <Link
+          className="account-link"
+          to="https://fitrquest-frontend.onrender.com/signup"
+        >
+          Sign Up
+        </Link>
+      </p>
+    </div>
+  );
+};
+
+export default Login;
