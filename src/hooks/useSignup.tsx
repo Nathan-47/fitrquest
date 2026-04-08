@@ -2,19 +2,26 @@ import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
 
 export const useSignup = () => {
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const { dispatch } = useAuthContext();
 
-  const signup = async (name, email, password) => {
+  const signup = async (
+    name: string,
+    email: string,
+    password: string,
+  ): Promise<void> => {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch('https://fitrquest-backend.onrender.com/user/signup', {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
-    });
+    const response = await fetch(
+      "https://fitrquest-backend.onrender.com/user/signup",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      },
+    );
 
     const json = await response.json();
 
