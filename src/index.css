@@ -47,7 +47,6 @@ select:focus-visible {
     transition: outline-color 0.2s ease, background-color 0.2s ease;
 }
 
-
 @media screen and (max-width: 850px) {
   .container {
     width: 90%;
@@ -474,11 +473,7 @@ a {
   color: #0097f1;
   font-weight: 800;
 }
-.error {
-  color: red;
-  position: absolute;
-  top: 17em;
-}
+
 
 @media screen and (max-width: 800px) {
 #signup-wrapper, #login-wrapper {width: 70%;}

@@ -1,3 +1,4 @@
+import { QuestType } from '../QuestType';
 import natasha from '../images/influencers/natasha_aughey.jpg';
 import jeff from '../images/influencers/jeff_nippard.jpg';
 import sam from '../images/influencers/sam_sulek.jpg';
@@ -8,7 +9,7 @@ import lucy from '../images/influencers/lucy_davis.jpg';
 import obi from '../images/influencers/obi_vincent.jpg';
 import richey from '../images/influencers/team_richey.jpg';
 
-const Quest = [
+const Quest: QuestType[] = [
     {
         question: "I am...",
         id: 0,
@@ -113,8 +114,6 @@ const Quest = [
         content: "From your input, you have been seen fit to begin your powerlifting journey. We’ll provide a beginner orientated roadmap to help you get stronger, master the three main lifts, and optimise your training for strength gains.",
 
         training: 'Focus on compound movements and full-body routines that target all major muscle groups.',
-
-        // TODO: Need to create a link same as the answerLinks below
 
         nutrition: 'We recommend to eat 2,500Kcal - 3,000Kcal+ but you can adjust using the Marco Finder [1] to suit your daily routine. \n For an automated meal plan to fit your calorie intake use the Meal Plan link [2] to make meal planning healthier and easier. \n To track your calories and weight use our recommended app MyFitnessPal as it easy to use and navigate through for all levels [3].',
 
