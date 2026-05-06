@@ -1,6 +1,7 @@
 export interface QuestType {
   id: number;
   question: string;
+  isResult?: boolean;
 
   answerA?: string;
   answerB?: string;
