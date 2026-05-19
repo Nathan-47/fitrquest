@@ -69,6 +69,7 @@ const Quest: QuestType[] = [
     {
         id: 7,
         question: "Bodybuilding",
+        isResult: true,
         intro: "Your journey has led you to Bodybuilding! 💪",
         content: "From your input, you have been seen fit to begin your bodybuilding journey. We’ll provide a beginner orientated roadmap to help you get stronger plus gain size and strength whilst looking good.",
 
@@ -110,6 +111,7 @@ const Quest: QuestType[] = [
     {
         id: 8,
         question: "Powerlifting",
+        isResult: true,
         intro: "Your journey has led you to Powerlifting! 💪",
         content: "From your input, you have been seen fit to begin your powerlifting journey. We’ll provide a beginner orientated roadmap to help you get stronger, master the three main lifts, and optimise your training for strength gains.",
 
@@ -140,7 +142,7 @@ const Quest: QuestType[] = [
         imgFileName2:'Gym Reaper',
         imgFileName3:'Russel Orhii',
 
-        instaLink: 'brian.alsruhe',
+        instaName: 'brian.alsruhe',
         instaName2: 'bigboybake',
         instaName3: 'russwole',
 
@@ -151,6 +153,7 @@ const Quest: QuestType[] = [
     {
         id: 9,
         question: "Crossfit/Hyrox",
+        isResult: true,
         intro: "Your journey has led you to CrossFit/Hyrox! 🏃‍♀️🏃‍♂️",
         content: "From your input, you have been fit to begin your CrossFit/Hyrox journey. Whether you're aiming to improve your overall fitness or compete, we’ll provide a beginner’s guide to help you learn functional movements, gain endurance, and get strong whilst having fun.",
 
@@ -184,7 +187,7 @@ const Quest: QuestType[] = [
         imgFileName2:'Obi Vincent',
         imgFileName3:'TeamRichey',
 
-        instaLink: 'lucydavis_fit',
+        instaName: 'lucydavis_fit',
         instaName2: 'obi_vincent',
         instaName3: 'carrichey',
 
