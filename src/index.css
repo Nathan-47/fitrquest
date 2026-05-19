@@ -172,9 +172,6 @@ table {
   width: 100%;
   text-align: center;
 }
-.quest-image, .quest-cal, .quest-info, .video1, .tab-wrapper, .quest-rec-heading, .quest-rec-content, .quest-help-heading, .restartBtn {
-  display: none;
-}
 .show {
   display: block;
 }

@@ -31,7 +31,7 @@ const a11yProps = (index: number) => ({
 const QuestFinder = () => {
   const [currentQ, setCurrentQ] = useState<QuestType | null>(null);
   const [tabValue, setTabValue] = useState<number>(0);
-  const [showResults, setShowResults] = useState<boolean>(false);
+  // const [showResults, setShowResults] = useState<boolean>(false);
 
   /* Initial question */
   useEffect(() => {
@@ -39,23 +39,20 @@ const QuestFinder = () => {
   }, []);
 
   /* Detect result state */
-  useEffect(() => {
-    if (!currentQ) return;
+  // useEffect(() => {
+  //   if (!currentQ) return;
 
-    if (
-      ["Bodybuilding", "Powerlifting", "Crossfit/Hyrox"].includes(
-        currentQ.question,
-      )
-    ) {
-      setShowResults(true);
-    }
-  }, [currentQ]);
+  //     setShowResults(!!currentQ.isResult);
+
+  // }, [currentQ]);
 
   if (!currentQ) return null;
 
+  const isResult = currentQ.isResult === true;
+
   // navigation handler
   const selectClickA = () => {
-    if (!currentQ) return;
+    if (!currentQ.idNextQuestionA) return;
 
     const nextQ = Quest.find(
       (q: QuestType) => q.id === currentQ.idNextQuestionA,
@@ -64,7 +61,7 @@ const QuestFinder = () => {
   };
 
   const selectClickB = () => {
-    if (!currentQ) return;
+    if (!currentQ.idNextQuestionB) return;
 
     const nextQ = Quest.find(
       (q: QuestType) => q.id === currentQ.idNextQuestionB,
@@ -89,7 +86,7 @@ const QuestFinder = () => {
     <div className="container">
       <div className="row">
         {/* questions */}
-        {!showResults && (
+        {!isResult && (
           <div className="question-wrapper">
             <div className="question-logo">
               <img src={questionLogo} alt="fitrquest logo" />
@@ -98,49 +95,118 @@ const QuestFinder = () => {
             <div className="textsection">{currentQ.question}</div>
 
             <div className="contents">
-              <button onClick={selectClickA}>{currentQ.answerA}</button>
+              <button
+                className="bg-black text-yellow-500 m-3 p-4 text-lg font-bold rounded-md 
+              hover:bg-white 
+              hover:outline
+             hover:outline-2
+             hover:text-black"
+                onClick={selectClickA}
+              >
+                {currentQ.answerA}
+              </button>
 
-              <button onClick={selectClickB}>{currentQ.answerB}</button>
+              <button
+                className="bg-black text-yellow-500 m-3 p-4 text-lg font-bold rounded-md 
+              hover:bg-white 
+              hover:outline
+             hover:outline-2
+             hover:text-black
+             "
+                onClick={selectClickB}
+              >
+                {currentQ.answerB}
+              </button>
             </div>
           </div>
         )}
 
-        <div className="quest-intro-snippet">{currentQ.intro}</div>
-        <div className="quest-intro">{currentQ.content}</div>
+        {/* Results component */}
+        {isResult && (
+          <>
+            {/* Intro */}
+            {currentQ.intro && (
+              <div className="quest-intro-snippet">{currentQ.intro}</div>
+            )}
 
-        {/* tabs component  */}
-        {showResults && (
-          <div className="tab-wrapper">
-            <Box sx={{ width: "100%" }}>
-              <Tabs
-                value={tabValue}
-                onChange={handleTabChange}
-                variant="fullWidth"
-              >
-                <Tab label="Training" {...a11yProps(0)} />
-                <Tab label="Nutrition" {...a11yProps(1)} />
-                <Tab label="Recovery" {...a11yProps(2)} />
-                <Tab label="Learn" {...a11yProps(3)} />
-              </Tabs>
+            {currentQ.content && (
+              <div className="quest-intro">{currentQ.content}</div>
+            )}
+
+            {/* tabs component  */}
+            <div className="tab-wrapper">
+              <Box sx={{ width: "100%" }}>
+                <Tabs
+                  value={tabValue}
+                  onChange={handleTabChange}
+                  variant="fullWidth"
+                  textColor="primary"
+                  indicatorColor="primary"
+                  sx={{
+                    "& .MuiTab-root": {
+                      color: "#292929",
+                      fontWeight: 600,
+                      textTransform: "none",
+                    },
+                    "& .Mui-selected": {
+                      color: "#E6A22B",
+                    },
+                    "& .MuiTabs-indicator": {
+                      backgroundColor: "#E6A22B",
+                      height: "3px",
+                    },
+                  }}
+                >
+                  <Tab label="Training" {...a11yProps(0)} />
+                  <Tab label="Nutrition" {...a11yProps(1)} />
+                  <Tab label="Recovery" {...a11yProps(2)} />
+                  <Tab label="Learn" {...a11yProps(3)} />
+                </Tabs>
+              </Box>
 
               <CustomTabPanel value={tabValue} index={0}>
                 <div>{currentQ.training}</div>
-                <a href={currentQ.trainingLink}>Training Link</a>
+                <a
+                  href={currentQ.trainingLink}
+                  className="text-blue-600 underline !mt-6"
+                >
+                  Training Link
+                </a>
               </CustomTabPanel>
 
               <CustomTabPanel value={tabValue} index={1}>
                 <div>{currentQ.nutrition}</div>
-                <a href={currentQ.answerlink1}>Macro Finder</a>
+                <a
+                  href={currentQ.answerlink1}
+                  className="text-blue-600 underline !mt-6"
+                >
+                  Macro Finder
+                </a>
                 <br />
-                <a href={currentQ.answerLink2}>Meal Planner</a>
+                <a
+                  href={currentQ.answerLink2}
+                  className="text-blue-600 underline !mt-6"
+                >
+                  Meal Planner
+                </a>
 
-                <iframe src={eatvid} title="Nutrition Help" />
+                <iframe
+                  src={eatvid}
+                  className="!mt-10 mb-12 mt-10 w-full aspect-video"
+                  allowFullScreen
+                  title="Nutrition Help"
+                />
               </CustomTabPanel>
 
               <CustomTabPanel value={tabValue} index={2}>
                 <div>{currentQ.recovery}</div>
 
-                <iframe src={recvid} title="Recovery Video" />
+                <iframe
+                  src={recvid}
+                  className="!mt-10 mb-12 mt-10 w-full aspect-video"
+                  allowFullScreen
+                  title="Recovery Video"
+                />
               </CustomTabPanel>
 
               <CustomTabPanel value={tabValue} index={3}>
@@ -148,35 +214,81 @@ const QuestFinder = () => {
                   <p key={i}>{line}</p>
                 ))}
               </CustomTabPanel>
-            </Box>
-          </div>
-        )}
-
-        {/* influencer section */}
-        {showResults && (
-          <>
-            <p className="quest-rec-heading">Influencer Recommendation</p>
-
-            <div className="columns-3">
-              <a href={instaLink} target="_blank">
-                <p>{currentQ.imgFileName}</p>
-                <img src={currentQ.imgFile} alt={currentQ.altTag1} />
-              </a>
-
-              <a href={instaLink2} target="_blank">
-                <p>{currentQ.imgFileName2}</p>
-                <img src={currentQ.imgFile2} alt={currentQ.altTag2} />
-              </a>
-
-              <a href={instaLink3} target="_blank">
-                <p>{currentQ.imgFileName3}</p>
-                <img src={currentQ.imgFile3} alt={currentQ.altTag3} />
-              </a>
             </div>
 
-            <p className="quest-help-heading">Helpful Videos</p>
+            {/* influencer section */}
+            <p className="quest-rec-heading">Influencer Recommendation</p>
 
-            <iframe src={ytvid} title="Helpful training video" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {currentQ.instaName && (
+                <a
+                  href={`https://www.instagram.com/${currentQ.instaName}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full"
+                >
+                  <div className="w-full max-w-sm h-auto mx-auto">
+                    <p className="w-full">{currentQ.imgFileName}</p>
+                    <img
+                      className="w-full"
+                      src={currentQ.imgFile}
+                      alt={currentQ.altTag1}
+                    />
+                  </div>
+                </a>
+              )}
+
+              {currentQ.instaName2 && (
+                <a
+                  href={`https://www.instagram.com/${currentQ.instaName2}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full"
+                >
+                  <div className="w-full max-w-sm h-auto mx-auto">
+                    <p>{currentQ.imgFileName2}</p>
+                    <img
+                      className="w-full"
+                      src={currentQ.imgFile2}
+                      alt={currentQ.altTag2}
+                    />
+                  </div>
+                </a>
+              )}
+
+              {currentQ.instaName3 && (
+                <a
+                  href={`https://www.instagram.com/${currentQ.instaName3}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full"
+                >
+                  <div className="w-full max-w-sm h-auto mx-auto">
+                    <p>{currentQ.imgFileName3}</p>
+                    <img
+                      className="w-full"
+                      src={currentQ.imgFile3}
+                      alt={currentQ.altTag3}
+                    />
+                  </div>
+                </a>
+              )}
+            </div>
+
+            {/* Helpful Video */}
+            {currentQ.answerVideo && (
+              <>
+                <p className="quest-help-heading mb-10">Helpful Videos</p>
+                <div className="mb-12 mt-10 w-full aspect-video">
+                  <iframe
+                    src={ytvid}
+                    title="Helpful training video"
+                    className="w-full h-full"
+                    allowFullScreen
+                  />
+                </div>
+              </>
+            )}
 
             <Link to="/" className="restartBtn">
               Restart Quest
